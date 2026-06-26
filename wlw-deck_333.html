@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Night Out Deck — WLW Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap');</style>
+<style>
+  :root {
+    --bg: #06050F;
+    --surface: #2A1F4E;
+    --surface2: #201740;
+    --surface3: #1A1235;
+    --wine: #2A0E1A;
+    --wine-mid: #4A1E2E;
+    --cream: #F0ECFF;
+    --cream-soft: #CBB5A7;
+    --terracotta: #A47564;
+    --dusty-teal: #8DB4BA;
+    --primary: #7059B0;
+    --primary-light: #9B82D4;
+    --primary-bright: #C4ADFF;
+    --primary-deep: #3D2B7A;
+    --primary-dim: rgba(112,89,176,0.2);
+    --indigo: #4A3F9A;
+    --indigo-light: #7B6FD4;
+    --indigo-bright: #B0A4F0;
+    --accent: #C44FE8;
+    --accent2: #E84F9A;
+    --ocean: #2A8FAA;
+    --ocean-light: #50C0D8;
+    --ocean-bright: #90DDEF;
+    --ocean-deep: #14537A;
+    --ocean-mid: #1E7A9A;
+    --red: #D93B3B;
+    --coral: #E05C4A;
+    --sage: #3A7A6A;
+    --lavender: #C0B0E8;
+    --muted: rgba(240,236,255,0.6);
+    --very-muted: rgba(240,236,255,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+    padding: 2.5rem 1rem 6rem;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  /* ── HEADER ── */
+  header {
+    max-width: 760px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--primary-bright);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 8vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.05;
+    margin-bottom: 0.4rem;
+  }
+
+  h1 em { font-style: italic; color: var(--primary-bright); }
+
+  .sub {
+    font-size: 0.56rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+
+  .rule { width: 1px; height: 40px; background: var(--primary-bright); margin: 0 auto 2rem; opacity: 0.35; }
+
+  /* ── BASELINE BANNER ── */
+  .baseline-banner {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    background: linear-gradient(135deg, var(--primary-deep), var(--surface2));
+    border: 1px solid rgba(100,83,148,0.3);
+    border-radius: 4px;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .baseline-title {
+    font-size: 0.56rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--primary-bright);
+    margin-bottom: 1rem;
+  }
+
+  .baseline-rule {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .baseline-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .baseline-step {
+    background: var(--surface2);
+    padding: 0.75rem 1rem;
+    border-radius: 3px;
+    border-left: 2px solid var(--primary-light);
+  }
+
+  .bs-num {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+    color: var(--primary-bright);
+    margin-bottom: 0.3rem;
+  }
+
+  .bs-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--cream);
+  }
+
+  /* ── COOCHIE CALLOUT ── */
+  .coochie-callout {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    background: linear-gradient(135deg, #1C1210, #181510);
+    border: 1px solid rgba(100,83,148,0.35);
+    border-radius: 4px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .coochie-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.15rem; }
+  .coochie-title { font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--lavender); margin-bottom: 0.5rem; }
+  .coochie-text { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; line-height: 1.7; color: var(--cream); }
+  .coochie-text em { font-style: italic; color: var(--accent2); }
+
+  /* ── PROGRESSION TRACK ── */
+  .progression {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    background: var(--surface);
+    border: 1px solid var(--very-muted);
+    border-top: 2px solid var(--teal);
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+
+  .prog-title { font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.25rem; }
+
+  .prog-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .prog-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--very-muted);
+    position: relative;
+  }
+
+  .prog-step:last-child { border-bottom: none; }
+
+  .prog-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface2);
+    border: 1px solid var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    color: var(--teal);
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .prog-dot.final { background: var(--teal); color: var(--bg); }
+
+  .prog-content { flex: 1; }
+
+  .prog-label {
+    font-size: 0.52rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .prog-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--cream);
+  }
+
+  /* ── OPENER GUIDE ── */
+  .opener-guide {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    background: var(--surface);
+    border: 1px solid var(--very-muted);
+    border-left: 2px solid var(--lavender);
+    padding: 1.5rem;
+    border-radius: 3px;
+  }
+
+  .opener-guide-title { font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--lavender); margin-bottom: 1.25rem; }
+
+  .opener-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.65rem; }
+
+  .opener-item { background: var(--surface2); padding: 0.7rem 0.85rem; border-radius: 2px; border: 1px solid var(--very-muted); }
+  .opener-name { font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary-bright); margin-bottom: 0.35rem; }
+  .opener-desc { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+
+  /* ── FILTER TABS ── */
+  .filter-row { max-width: 760px; margin: 0 auto 1rem; }
+  .filter-label { font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
+
+  .tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+
+  .tab {
+    background: transparent;
+    border: 1px solid var(--very-muted);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.18s;
+    border-radius: 2px;
+  }
+
+  .tab:hover { border-color: var(--accent2); color: var(--accent2); }
+  .tab.active { background: linear-gradient(135deg, var(--primary-deep), var(--indigo)); border-color: var(--primary); color: var(--cream); }
+
+  /* ── DEAL BAR ── */
+  .deal-bar {
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    display: flex;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .deal-btn {
+    background: transparent;
+    border: 1px solid var(--primary-light);
+    color: var(--primary-light);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.56rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.65rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.18s;
+    border-radius: 2px;
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .deal-btn:hover { background: var(--primary); color: var(--cream); }
+
+  /* ── FEATURED ── */
+  .featured {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    background: var(--surface2);
+    border: 1px solid var(--primary-light);
+    border-radius: 4px;
+    padding: 2rem;
+    text-align: center;
+    display: none;
+    animation: fadeUp 0.3s ease;
+  }
+
+  .featured.show { display: block; }
+  .featured-label { font-size: 0.52rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--indigo); margin-bottom: 0.75rem; }
+  .featured-type { font-size: 0.52rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
+  .featured-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 2.8vw, 1.35rem); line-height: 1.75; color: var(--cream); margin-bottom: 0.6rem; }
+  .featured-cue { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.6; }
+  .featured-venues { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
+
+  /* ── CARD GRID ── */
+  .count-label { max-width: 760px; margin: 0 auto 1rem; font-size: 0.52rem; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; }
+
+  .card-grid { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1rem; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--very-muted);
+    border-radius: 3px;
+    padding: 1.5rem;
+    position: relative;
+    display: none;
+    animation: fadeUp 0.22s ease forwards;
+  }
+
+  .card.show { display: block; }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    border-radius: 3px 3px 0 0;
+  }
+
+  .card.baseline::before { background: linear-gradient(90deg, var(--primary-deep), var(--primary)); }
+  .card.warm::before { background: linear-gradient(90deg, var(--ocean-deep), var(--ocean-mid)); }
+  .card.approach::before { background: linear-gradient(90deg, var(--ocean), var(--ocean-light)); }
+  .card.intro::before { background: var(--dusty-teal); }
+  .card.mini::before { background: linear-gradient(90deg, var(--indigo), var(--primary)); }
+  .card.bold::before { background: linear-gradient(90deg, var(--indigo), var(--indigo-light)); }
+  .card.scary::before { background: linear-gradient(90deg, var(--primary-deep), var(--accent)); }
+  .card.progression::before { background: linear-gradient(90deg, var(--ocean-deep), var(--ocean-mid)); }
+  .card.coochie::before { background: linear-gradient(90deg, var(--primary-deep), var(--accent)); }
+  .card.hardmode::before { background: linear-gradient(90deg, var(--primary-bright), var(--indigo)); }
+  .card.bonus::before { background: var(--primary-bright); }
+  .card.bonus .card-type { color: var(--primary-bright); }
+  .card.friend::before { background: linear-gradient(90deg, var(--ocean-deep), var(--primary-deep)); }
+  .card.friend .card-type { color: var(--ocean-light); }
+  .card.networking::before { background: linear-gradient(90deg, var(--ocean-mid), var(--ocean-light)); }
+  .card.networking .card-type { color: var(--ocean-bright); }
+  .card.bombshell::before { background: linear-gradient(90deg, var(--red), var(--coral)); }
+  .card.bombshell .card-type { color: var(--coral); }
+  .card.wildcard::before { background: linear-gradient(90deg, var(--ocean), var(--accent)); }
+  .card.wildcard .card-type { color: var(--ocean-bright); }
+
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.85rem; }
+
+  .card-type { font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase; }
+  .card.baseline .card-type { color: var(--primary-bright); }
+  .card.warm .card-type { color: var(--ocean-light); }
+  .card.approach .card-type { color: var(--accent2); }
+  .card.intro .card-type { color: var(--dusty-teal); }
+  .card.mini .card-type { color: var(--accent2); }
+  .card.bold .card-type { color: var(--indigo-bright); }
+  .card.scary .card-type { color: var(--accent); }
+  .card.progression .card-type { color: var(--ocean-light); }
+  .card.coochie .card-type { color: var(--lavender); }
+  .card.hardmode .card-type { color: var(--primary-bright); }
+  .card.bonus .card-type { color: var(--primary-bright); }
+
+  .card-num { font-size: 0.48rem; color: var(--very-muted); letter-spacing: 0.1em; }
+
+  .opener-badge {
+    display: inline-block;
+    font-size: 0.48rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.5rem;
+    border-radius: 2px;
+    background: var(--very-muted);
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--very-muted);
+  }
+
+  .card-text { font-family: 'Cormorant Garamond', serif; font-size: 1rem; line-height: 1.72; color: var(--cream); margin-bottom: 1.1rem; }
+
+  .options-block { margin-bottom: 1rem; }
+  .options-label { font-size: 0.46rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+  .option-item { display: flex; gap: 0.5rem; margin-bottom: 0.4rem; align-items: flex-start; }
+  .option-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--primary-bright); flex-shrink: 0; margin-top: 0.45rem; }
+  .option-text { font-family: 'Cormorant Garamond', serif; font-size: 0.88rem; line-height: 1.55; color: var(--muted); }
+
+  .social-cue {
+    background: var(--surface2);
+    border-left: 2px solid var(--very-muted);
+    padding: 0.6rem 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .social-cue-label { font-size: 0.46rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+  .social-cue-text { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--muted); line-height: 1.55; font-style: italic; }
+
+  .card-footer { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+  .venue-tag { font-size: 0.46rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.18rem 0.5rem; border-radius: 2px; background: var(--very-muted); color: var(--muted); border: 1px solid var(--very-muted); }
+  .venue-tag.museum { border-color: rgba(112,89,176,0.35); color: var(--primary-bright); }
+  .venue-tag.southhouse { border-color: rgba(91,181,206,0.25); color: var(--accent2); }
+  .venue-tag.church { border-color: rgba(155,139,180,0.3); color: var(--lavender); }
+  .venue-tag.anywhere { border-color: rgba(100,83,148,0.25); color: var(--primary-light); }
+  .venue-tag.scary { border-color: rgba(90,138,130,0.3); color: var(--teal); }
+  .venue-tag.dj { border-color: rgba(196,79,232,0.35); color: var(--lavender); }
+  .venue-tag.fitness { border-color: rgba(80,192,216,0.35); color: var(--ocean-light); }
+  .venue-tag.bookstore { border-color: rgba(112,89,176,0.3); color: var(--indigo-bright); }
+  .venue-tag.winebar { border-color: rgba(232,79,154,0.35); color: var(--accent2); }
+  .venue-tag.bougie { border-color: rgba(123,104,173,0.3); color: var(--lavender); }
+  .venue-tag.sports { border-color: rgba(42,143,170,0.35); color: var(--ocean-light); }
+  .venue-tag.festival { border-color: rgba(196,79,232,0.3); color: var(--lavender); }
+  .venue-tag.gallery { border-color: rgba(80,192,216,0.3); color: var(--dusty-teal); }
+  .venue-tag.sapphic { border-color: rgba(232,79,154,0.4); color: var(--accent2); }
+  .venue-tag.outdoor { border-color: rgba(42,143,170,0.3); color: var(--ocean-mid); }
+  .venue-tag.improv { border-color: rgba(112,89,176,0.3); color: var(--primary-bright); }
+  .venue-tag.retreat { border-color: rgba(42,143,170,0.3); color: var(--ocean-light); }
+  .venue-tag.political { border-color: rgba(42,143,170,0.3); color: var(--ocean-mid); }
+  .venue-tag.dancing { border-color: rgba(196,79,232,0.3); color: var(--accent); }
+  .venue-tag.climbing { border-color: rgba(80,192,216,0.35); color: var(--ocean-light); }
+  .venue-tag.gaming { border-color: rgba(112,89,176,0.35); color: var(--primary-bright); }
+  .venue-tag.writing { border-color: rgba(112,89,176,0.3); color: var(--indigo-light); }
+  .venue-tag.art { border-color: rgba(91,181,206,0.25); color: var(--accent2); }
+  .venue-tag.leftist { border-color: rgba(42,143,170,0.3); color: var(--ocean-mid); }
+  .venue-tag.houseprty { border-color: rgba(232,79,154,0.3); color: var(--accent2); }
+  .venue-tag.chess { border-color: rgba(112,89,176,0.3); color: var(--indigo-bright); }
+
+  .empty { text-align: center; padding: 3rem; color: var(--muted); font-size: 0.7rem; display: none; max-width: 760px; margin: 0 auto; }
+  .empty.show { display: block; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* section dividers */
+  .section-divider {
+    max-width: 760px;
+    margin: 2.5rem auto 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sd-line { flex: 1; height: 1px; background: var(--very-muted); }
+  .sd-label { font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+
+    /* ── INTENTION PANELS ── */
+  .intention-wrap { max-width: 760px; margin: 0 auto 2.5rem; }
+
+  .intent-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0; }
+
+  .intent-tab {
+    background: transparent;
+    border: 1px solid var(--very-muted);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.18s;
+    border-radius: 3px 3px 0 0;
+    border-bottom: none;
+  }
+
+  .intent-tab.active { background: var(--surface2); border-color: var(--primary); color: var(--primary-bright); }
+  .intent-tab:hover:not(.active) { color: var(--primary-light); }
+
+  .intent-panel {
+    background: var(--surface2);
+    border: 1px solid var(--very-muted);
+    border-radius: 0 3px 3px 3px;
+    padding: 1.5rem;
+  }
+
+  .intent-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+    /* ── FAILURE TRACKER ── */
+  .fail-tracker {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    background: linear-gradient(160deg, var(--primary-deep), var(--surface2));
+    border: 1px solid rgba(112,89,176,0.3);
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+
+  .fail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+  }
+
+  .fail-title {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--primary-bright);
+    margin-bottom: 0.3rem;
+  }
+
+  .fail-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.5;
+    max-width: 480px;
+  }
+
+  .fail-reset {
+    background: transparent;
+    border: 1px solid var(--very-muted);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    cursor: pointer;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .fail-reset:hover { border-color: var(--primary-light); color: var(--primary-light); }
+
+  .fail-bar-wrap {
+    height: 3px;
+    background: var(--very-muted);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .fail-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--primary), var(--ocean-light));
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+
+  .fail-dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .fail-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(112,89,176,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    background: var(--surface);
+  }
+
+  .fail-dot.filled {
+    background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+    border-color: var(--primary-light);
+    animation: popIn 0.3s ease;
+  }
+
+  @keyframes popIn {
+    0% { transform: scale(0.7); opacity: 0.5; }
+    60% { transform: scale(1.15); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .fail-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .fail-btn {
+    background: var(--surface);
+    border: 1px solid var(--very-muted);
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.85rem;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.18s;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .fail-btn:hover { border-color: var(--primary-light); color: var(--primary-bright); }
+
+  .fail-reward {
+    background: linear-gradient(135deg, var(--wine-mid), var(--primary-deep));
+    border: 1px solid var(--primary-light);
+    border-radius: 3px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    animation: fadeUp 0.4s ease;
+  }
+
+  .fail-reward-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--cream);
+    font-style: italic;
+  }
+
+  .fail-log-label {
+    font-size: 0.48rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--very-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .fail-log {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    min-height: 1.5rem;
+  }
+
+  .fail-log-item {
+    font-size: 0.48rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    background: var(--very-muted);
+    color: var(--muted);
+    border-radius: 2px;
+    border: 1px solid var(--very-muted);
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">For the introvert who chose boldness tonight</p>
+  <h1>The Night Out<br><em>Challenge Deck</em></h1>
+  <p class="sub">WLW Edition — Final Version</p>
+  <div class="rule"></div>
+</header>
+
+<!-- BASELINE BANNER -->
+<div class="baseline-banner">
+  <p class="baseline-title">Your Baseline Practice — Do This Every Time You Leave the House</p>
+  <p class="baseline-rule">"Eye contact and a slow smile is not flirting. It's presence. Make it your resting state in public."</p>
+  <div class="baseline-steps">
+    <div class="baseline-step">
+      <p class="bs-num">Step 01</p>
+      <p class="bs-text">Walking in: make eye contact with the first three people you pass. Hold it one beat longer than you normally would. Don't look away first.</p>
+    </div>
+    <div class="baseline-step">
+      <p class="bs-num">Step 02</p>
+      <p class="bs-text">At any moment of stillness — waiting, browsing, watching — let your eyes be soft and open instead of on your phone.</p>
+    </div>
+    <div class="baseline-step">
+      <p class="bs-num">Step 03</p>
+      <p class="bs-text">When someone looks at you and you feel it, don't look away immediately. Let there be a beat. Then decide what to do with it.</p>
+    </div>
+    <div class="baseline-step">
+      <p class="bs-num">Step 04</p>
+      <p class="bs-text">Smile like you mean it when you make eye contact. Not a full grin — the slow, self-possessed kind. That's the move.</p>
+    </div>
+    <div class="baseline-step">
+      <p class="bs-num">Goal</p>
+      <p class="bs-text">10 genuine eye contact + smile moments before you approach a single person. This is your warmup. Every time. Non-negotiable.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESSION TRACK -->
+<div class="progression">
+  <p class="prog-title">The Date Progression Track — How You Actually Get There</p>
+  <div class="prog-steps">
+    <div class="prog-step">
+      <div class="prog-dot">01</div>
+      <div class="prog-content">
+        <p class="prog-label">Baseline</p>
+        <p class="prog-text">Eye contact + smile at minimum 10 people. You're warming up your social nervous system, not hunting. No conversation required yet.</p>
+      </div>
+    </div>
+    <div class="prog-step">
+      <div class="prog-dot">02</div>
+      <div class="prog-content">
+        <p class="prog-label">The Open</p>
+        <p class="prog-text">One intentional conversation with someone you find genuinely interesting. Use an observation, a question, or wave them over. Three minutes minimum.</p>
+      </div>
+    </div>
+    <div class="prog-step">
+      <div class="prog-dot">03</div>
+      <div class="prog-content">
+        <p class="prog-label">The Return</p>
+        <p class="prog-text">Go back to someone you already spoke to earlier in the night. "I've been thinking about what you said about—" This is where things actually happen.</p>
+      </div>
+    </div>
+    <div class="prog-step">
+      <div class="prog-dot">04</div>
+      <div class="prog-content">
+        <p class="prog-label">The Exchange</p>
+        <p class="prog-text">Give her a way to reach you — your number, email, or a digital business card. Keep it natural. You don’t have to make it a moment.</p>
+      </div>
+    </div>
+    <div class="prog-step">
+      <div class="prog-dot">05</div>
+      <div class="prog-content">
+        <p class="prog-label">Making Your Interest Known</p>
+        <p class="prog-text">Before the night ends, say what you're open to — keep it light, give her options. Something like: "I'd be down for drinks, or pastries somewhere, or a smoothie — nothing complicated." You've shown interest. She can do the planning.</p>
+      </div>
+    </div>
+    <div class="prog-step">
+      <div class="prog-dot final">06</div>
+      <div class="prog-content">
+        <p class="prog-label">The Actual Date</p>
+        <p class="prog-text">You followed through on the soft pitch. You confirmed within 48 hours. You showed up. That's the card. That's the win.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COOCHIE CARD -->
+<div class="coochie-callout">
+  <div class="coochie-icon">🃏</div>
+  <div>
+    <p class="coochie-title">The Coochie Card — Your Dating Business Card</p>
+    <p class="coochie-text">Keep a small stack. Hand one only when <em>you</em> genuinely felt something — not as a polite exit, not to collect a follower. It says: I chose you on purpose. The card's power is its scarcity. If you hand it out to everyone, it means nothing. If you hand it out to <em>her</em>, it means everything.</p>
+  </div>
+</div>
+
+<!-- OPENER GUIDE -->
+<div class="opener-guide">
+  <p class="opener-guide-title">How to open the space — your menu of moves</p>
+  <div class="opener-grid">
+    <div class="opener-item"><p class="opener-name">Observation</p><p class="opener-desc">Say something true about the room, the art, the moment. Not about them yet. Let them respond before you introduce yourself.</p></div>
+    <div class="opener-item"><p class="opener-name">Compliment</p><p class="opener-desc">Be specific. Not "cute fit." Describe the piece, the styling choice, the detail only someone paying attention would notice.</p></div>
+    <div class="opener-item"><p class="opener-name">Question</p><p class="opener-desc">Ask something you're genuinely curious about. Genuine is always more attractive than clever.</p></div>
+    <div class="opener-item"><p class="opener-name">Wave Over</p><p class="opener-desc">Eye contact, slight head tilt, slow half-smile. Let them come to you. Then you speak first once they arrive.</p></div>
+    <div class="opener-item"><p class="opener-name">Hi + Eye Contact</p><p class="opener-desc">Full eye contact, warm smile, one word. Then let silence breathe for two beats. They'll fill it. That's the moment.</p></div>
+    <div class="opener-item"><p class="opener-name">Spread the News</p><p class="opener-desc">"You have to see the piece in the next room." Give them something worth having before you introduce yourself.</p></div>
+    <div class="opener-item"><p class="opener-name">Sprinkle Value</p><p class="opener-desc">Share a fact, a recommendation, insider intel. You're a resource, not a petitioner.</p></div>
+    <div class="opener-item"><p class="opener-name">Random Kindness</p><p class="opener-desc">Hold a door, offer a light, grab a napkin. Let the conversation open naturally after. Don't explain the gesture.</p></div>
+    <div class="opener-item"><p class="opener-name">Put in a Request</p><p class="opener-desc">"Can you hold this for a second?" Small ask. Big moment. Creates an opening with zero pressure.</p></div>
+    <div class="opener-item"><p class="opener-name">Casually Cut In</p><p class="opener-desc">Join a group conversation naturally. Add something that moves it forward. Don't announce yourself — just arrive.</p></div>
+    <div class="opener-item"><p class="opener-name">Change It Up</p><p class="opener-desc">Walk over with no plan. Let your presence speak first. This is for when you're feeling yourself and you know it.</p></div>
+  </div>
+</div>
+
+<!-- FRIEND-MAKING GUIDE -->
+<div class="opener-guide" style="border-left-color: var(--sage); margin-bottom: 2.5rem;">
+  <p class="opener-guide-title" style="color: var(--sage);">Friend-Making — What You're Actually Looking For</p>
+  <div class="opener-grid">
+    <div class="opener-item"><p class="opener-name" style="color:var(--sage);">The Go-Getter</p><p class="opener-desc">Asks about your work with real curiosity. Talks about what she's building. Ambitious without competing with yours.</p></div>
+    <div class="opener-item"><p class="opener-name" style="color:var(--sage);">The Social Dynamo</p><p class="opener-desc">The main character who makes rooms feel alive. Find her, tell her she's good at it, and let her pull you into her orbit.</p></div>
+    <div class="opener-item"><p class="opener-name" style="color:var(--sage);">The Host Friend</p><p class="opener-desc">She organizes things. Show up to what she creates. Bring something. Say what was good. She'll invite you back.</p></div>
+    <div class="opener-item"><p class="opener-name" style="color:var(--sage);">The Show-Up Friend</p><p class="opener-desc">Answers when it's real. Remembers what you mentioned offhand. Shows up without being asked. You need two. They reveal themselves over time.</p></div>
+    <div class="opener-item"><p class="opener-name" style="color:var(--sage);">Unmasked ND Energy</p><p class="opener-desc">Hyperfocused, direct, genuinely themselves. Find what they're lit up about and ask about it specifically. Don't redirect.</p></div>
+    <div class="opener-item"><p class="opener-name" style="color:var(--sage);">Friend vs Date Routing</p><p class="opener-desc">Do you want to know about her life, or be in it? Comfortable near her = friend. Pulled toward her = date. Name it to yourself.</p></div>
+  </div>
+</div>
+
+<!-- INTENTION + PROGRESSION PANELS -->
+<div class="intention-wrap">
+
+  <div class="intent-tabs">
+    <button class="intent-tab active" onclick="showIntent('dating',this)">💜 Dating</button>
+    <button class="intent-tab" onclick="showIntent('friendship',this)">🌿 Friendship</button>
+    <button class="intent-tab" onclick="showIntent('networking',this)">🔗 Networking</button>
+    <button class="intent-tab" onclick="showIntent('multimode',this)">⚡ Multi-Mode</button>
+  </div>
+
+  <!-- DATING -->
+  <div class="intent-panel" id="intent-dating">
+    <p class="intent-title" style="color:var(--accent2);">Dating — Tone, Pace & Standards</p>
+    <div class="opener-grid">
+      <div class="opener-item" style="border-left: 2px solid var(--accent2);">
+        <p class="opener-name" style="color:var(--accent2);">Setting the Tone</p>
+        <p class="opener-desc">You set the tone by being fully yourself — warm, present, unhurried, unbothered by outcome. People calibrate to your energy. Arrive grounded and enjoying yourself. Your presence is the standard. (Anwar White: the woman who knows her worth doesn't chase — she receives.)</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--accent2);">
+        <p class="opener-name" style="color:var(--accent2);">The Rung Architecture</p>
+        <p class="opener-desc">Not everyone gets the same access. Strangers get warmth. Acquaintances get your time at events. Dates get a call and a low-frills first meet. Partners get consistency and trust — earned over time. No one skips rungs. No one creeps up without demonstrating the behavior that earns the next level.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--accent);">
+        <p class="opener-name" style="color:var(--accent);">Emotional Vetting</p>
+        <p class="opener-desc">Watch for: do they regulate their emotions or export them to you? Do they initiate repairs or disappear? Are they consistent — same energy texting, calling, in person — or do they shape-shift? Inconsistency is data. Collect it quietly before investing more.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--accent);">
+        <p class="opener-name" style="color:var(--accent);">Intentionality Vetting</p>
+        <p class="opener-desc">Intentional people make plans and follow through. They don't leave you in ambiguity because ambiguity serves them. Ask yourself after every interaction: did this feel clear or did I fill in blanks? Clarity is care. Vagueness is a boundary violation in slow motion.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--primary-bright);">
+        <p class="opener-name" style="color:var(--primary-bright);">The Ask Test</p>
+        <p class="opener-desc">Ask for something small early — a recommendation, an opinion, a small favor. People who show up for a small ask can show up when it matters. People who deflect or disappear on low-stakes requests will do the same later. Ask early. Watch what happens.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--primary-bright);">
+        <p class="opener-name" style="color:var(--primary-bright);">Pace — Let Them Pursue</p>
+        <p class="opener-desc">You show interest — warmth, presence, a couple of low-key options. Then you wait. The pursuit tells you everything about their capacity to invest. Someone who doesn't pursue when given an opening is either not interested or not ready. Don't fill the silence.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--dusty-teal);">
+        <p class="opener-name" style="color:var(--dusty-teal);">Core 5 — One Rung for Your Partner</p>
+        <p class="opener-desc">Your Core 5 is your most intimate circle. One slot is ideally held for your future partner. Core 5 requires shared values — not just shared vibe. How they treat people with less power, how they hold their word, how they love, and what they're building.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--dusty-teal);">
+        <p class="opener-name" style="color:var(--dusty-teal);">Non-Negotiables</p>
+        <p class="opener-desc">They plan and pursue. They are emotionally regulated and available. They celebrate you without competing. Consistent — not intense then absent. They make you feel free, not managed. They have their own purpose and capacity to give. You don't shrink, explain, or perform.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIENDSHIP -->
+  <div class="intent-panel" id="intent-friendship" style="display:none;">
+    <p class="intent-title" style="color:var(--ocean-light);">Friendship — Dunbar's Circles + Reciprocity</p>
+    <div class="opener-grid">
+      <div class="opener-item" style="border-left: 2px solid var(--ocean-light);">
+        <p class="opener-name" style="color:var(--ocean-light);">Core 5 — Daily or Weekly</p>
+        <p class="opener-desc">Chosen family. Shared values (not just interests), mutual showing up, emotional safety, willingness to go out of your way for each other. To earn this rung: showed up when it cost them something, held what you shared with care, demonstrated values alignment over time. One slot ideally for your future partner.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--ocean-light);">
+        <p class="opener-name" style="color:var(--ocean-light);">Close 15 — Every Couple of Weeks</p>
+        <p class="opener-desc">Real friends. Shared values broadly, genuine curiosity about each other's lives, reciprocal effort, some vulnerability held with care. The jump from acquaintance requires one real conversation where something true was said and received well. Danielle Bayard Jackson: healthy friendships have a rhythm of mutual reaching — bid and response.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--primary-light);">
+        <p class="opener-name" style="color:var(--primary-light);">Affectionate 50 — Monthly</p>
+        <p class="opener-desc">People you're genuinely glad to see. Warm acquaintances, event friends, fellow regulars. This circle doesn't require maintenance — just warmth when paths cross. A warm acquaintance who stays warm is more valuable than a forced close friendship. Don't overpromise here.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--primary-light);">
+        <p class="opener-name" style="color:var(--primary-light);">The Rung Architecture</p>
+        <p class="opener-desc">People stay at the rung they've demonstrated. Someone who only reaches out when they need something stays at 50, not 15. Someone present but not values-aligned stays at 15, not 5. The rung is accurate, not punitive. You calibrate access based on behavior, not potential.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--dusty-teal);">
+        <p class="opener-name" style="color:var(--dusty-teal);">Going Out of Your Way</p>
+        <p class="opener-desc">Real friendship requires inconvenience sometimes — showing up to something that matters to them, remembering and following up, initiating when they haven't. This is the tax of intimacy. It tells you who belongs at which rung: who goes out of their way for you?</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--dusty-teal);">
+        <p class="opener-name" style="color:var(--dusty-teal);">The Ask Test + Reciprocity Check</p>
+        <p class="opener-desc">Ask something small early and watch who responds. At 6 weeks, check the temperature without keeping score. Danielle Bayard Jackson's bid-and-response: are bids for connection being met? Nedra Tawwab (Set Boundaries, Find Peace): if you're over-functioning, pull back slightly and observe what happens next.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NETWORKING -->
+  <div class="intent-panel" id="intent-networking" style="display:none;">
+    <p class="intent-title" style="color:var(--dusty-teal);">Networking — Entertainment Industry</p>
+    <div class="opener-grid">
+      <div class="opener-item" style="border-left: 2px solid var(--dusty-teal);">
+        <p class="opener-name" style="color:var(--dusty-teal);">Freelance Film + Photo</p>
+        <p class="opener-desc">Your next job comes from who remembers you warmly and trusts your work. Myleik Teele: earned access — you don't get the room by asking for it, you get it by being someone people want in the room. Be excellent, easy to work with, follow through without being followed up on.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--dusty-teal);">
+        <p class="opener-name" style="color:var(--dusty-teal);">Day Job / Agency Track</p>
+        <p class="opener-desc">Studios and agencies hire people they've heard of positively or who come recommended. Jodie Taylor: strategic visibility — be in the rooms before you have the credits to get in on merit. Junior boards, ERG events, and industry panels are how you build a name before a reel does it.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--ocean-light);">
+        <p class="opener-name" style="color:var(--ocean-light);">Know Your Worth Before the Room</p>
+        <p class="opener-desc">Emma Grede: know your value before you walk in, because the room will not assign it to you. Carry it in. Know your one-line: what you make, what you're working on, what you're building. Not a pitch — a presence. The most magnetic people know exactly who they are.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--ocean-light);">
+        <p class="opener-name" style="color:var(--ocean-light);">Cultural Authority</p>
+        <p class="opener-desc">Bozoma St. John: be unforgettable by being fully yourself — your Blackness, your queerness, your creative identity are not variables to manage, they are what makes you irreplaceable. The goal isn't to fit into the room — it's to be who the room remembers.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--primary-light);">
+        <p class="opener-name" style="color:var(--primary-light);">Visibility → Credibility → Trust → Opportunity</p>
+        <p class="opener-desc">You can't skip stages. Visibility: they know your name. Credibility: they know you're good. Trust: they'd put their name behind you. Opportunity: they think of you when something opens. Each stage is built through consistent behavior over time, not one impressive interaction.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--primary-light);">
+        <p class="opener-name" style="color:var(--primary-light);">Making Asks That Land</p>
+        <p class="opener-desc">Lead with value before any ask. Be specific — vague asks are easy to defer. Make it easy to say yes: 20-minute call, one intro, one piece of advice. Don't follow up more than twice. Myleik Teele: the ask should feel consistent with every interaction before it, not like a transaction that came out of nowhere.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MULTI-MODE -->
+  <div class="intent-panel" id="intent-multimode" style="display:none;">
+    <p class="intent-title" style="color:var(--primary-light);">Multi-Mode — When It's Everything at Once</p>
+    <div class="opener-grid">
+      <div class="opener-item" style="border-left: 2px solid var(--primary-light);">
+        <p class="opener-name" style="color:var(--primary-light);">Main Character Energy</p>
+        <p class="opener-desc">The goal isn't to be strategic all night. It's to be so fully yourself — curious, warm, enjoying the room — that the right people find you. Main character energy is not performance. It's presence. You're not working the room by hitting every corner. You're working it by being the person everyone is a little more alive near.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--primary-light);">
+        <p class="opener-name" style="color:var(--primary-light);">Set Your Mode First</p>
+        <p class="opener-desc">Decide your primary intention before you walk in — not exclusively, just primarily. "Tonight I'm here to connect, dating is a bonus" feels different in your body than "tonight I'm looking." Your energy broadcasts your intention. Walking in with clarity makes everything easier and more enjoyable.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--ocean);">
+        <p class="opener-name" style="color:var(--ocean-light);">Reading Your Mode</p>
+        <p class="opener-desc">Networking: curious about what they do and where they're going. Friendship: curious about who they are and how they think. Dating: you feel something — a pull, a warmth, a wanting to stay past the point of usefulness. These can overlap. Name what you're feeling so you can act on it clearly.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--ocean);">
+        <p class="opener-name" style="color:var(--ocean-light);">The 15-Minute Rule</p>
+        <p class="opener-desc">Cap romantic and networking conversations at 15 minutes unless something extraordinary is happening. End it while it's good. Friendship conversations are the exception — those can go as long as they want. A clean exit: "This was actually really good — I'm going to go find my people." Warm. Final. No awkwardness.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--dusty-teal);">
+        <p class="opener-name" style="color:var(--dusty-teal);">Pivoting Between Modes</p>
+        <p class="opener-desc">You can pivot mid-conversation. Networking to dating: slow down, get warmer, stop talking about work. Dating to friendship: relax the undertone, widen the conversation. The pivot is internal — you don't announce it. Your energy shifts and they'll feel it.</p>
+      </div>
+      <div class="opener-item" style="border-left: 2px solid var(--dusty-teal);">
+        <p class="opener-name" style="color:var(--dusty-teal);">Protect Your Energy</p>
+        <p class="opener-desc">Multi-mode nights are the most draining. Know your limit. After a certain point, shift to enjoyment-only mode — stop networking, stop looking, just be in the room with no agenda. The best connections often happen when you've stopped trying. Fun is also a strategy. Give yourself permission to just have a good time.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- FAILURE TRACKER -->
+<div class="fail-tracker" id="failTracker">
+  <div class="fail-header">
+    <div>
+      <p class="fail-title">Tonight's Score</p>
+      <p class="fail-sub">All of these count. The goal is 5 moments of courage. Every win and every graceful move forward is on the board.</p>
+    </div>
+    <button class="fail-reset" onclick="resetFails()">Reset</button>
+  </div>
+
+  <div class="fail-columns">
+    <div class="fail-col" style="border-left: 2px solid var(--very-muted); padding-left: 0.75rem;">
+      <p class="fail-col-label" style="color: var(--muted);">Warm-Up — goal: 10</p>
+      <div class="fail-actions">
+        <button class="fail-btn" onclick="addWarmup()">👁 Eye contact + smile</button>
+      </div>
+    </div>
+    <div class="fail-col" style="border-left: 2px solid var(--very-muted); padding-left: 0.75rem;">
+      <p class="fail-col-label" style="color: var(--muted);">Moments of Courage — goal: 5</p>
+      <div class="fail-actions">
+        <button class="fail-btn" onclick="addFail('graceful_no')">💜 Gave a graceful no</button>
+        <button class="fail-btn" onclick="addFail('exit')">🌊 Exited at first discomfort</button>
+        <button class="fail-btn" onclick="addFail('shot')">⚡ Took the shot, moved on</button>
+      </div>
+    </div>
+    <div class="fail-col">
+      <p class="fail-col-label">Wins</p>
+      <div class="fail-actions">
+        <button class="fail-btn fail-btn-win" onclick="addWin('info')">🔗 Exchanged info</button>
+        <button class="fail-btn fail-btn-win" onclick="addWin('convo')">💬 Great conversation</button>
+        <button class="fail-btn fail-btn-win" onclick="addWin('compliment')">🌸 Gave a compliment</button>
+        <button class="fail-btn fail-btn-win" onclick="addWin('intro')">✨ Introduced myself</button>
+        <button class="fail-btn fail-btn-win" onclick="addWin('card')">🃏 Gave out a coochie card</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fail-bar-row">
+    <div>
+      <p class="fail-bar-label">Warm-Up — goal: 10</p>
+      <div class="fail-bar-wrap"><div class="fail-bar" id="warmupBar" style="background: linear-gradient(90deg, var(--primary-deep), var(--primary-bright));"></div></div>
+    </div>
+    <div>
+      <p class="fail-bar-label">Courage Moments — goal: 5</p>
+      <div class="fail-bar-wrap"><div class="fail-bar" id="failBar"></div></div>
+    </div>
+    <div>
+      <p class="fail-bar-label">Wins</p>
+      <div class="fail-bar-wrap"><div class="fail-bar" id="winBar" style="background: linear-gradient(90deg, var(--ocean-deep), var(--ocean-light));"></div></div>
+    </div>
+  </div>
+
+  <div class="fail-reward" id="failReward" style="display:none;">
+    <p class="fail-reward-text" id="failRewardText"></p>
+  </div>
+
+  <div class="fail-log-row">
+    <div>
+      <p class="fail-log-label">Warm-Up</p>
+      <div class="fail-log" id="warmupLog"></div>
+    </div>
+    <div>
+      <p class="fail-log-label">Courage</p>
+      <div class="fail-log" id="failLog"></div>
+    </div>
+    <div>
+      <p class="fail-log-label">Wins</p>
+      <div class="fail-log" id="winLog"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filter-row">
+  <p class="filter-label">By category</p>
+  <div class="tabs" id="levelTabs">
+    <button class="tab active" onclick="setFilter('level','all',this)">All</button>
+    <button class="tab" onclick="setFilter('level','baseline',this)">Baseline</button>
+    <button class="tab" onclick="setFilter('level','warm',this)">Warm-Up</button>
+    <button class="tab" onclick="setFilter('level','approach',this)">Approach</button>
+    <button class="tab" onclick="setFilter('level','intro',this)">Intro</button>
+    <button class="tab" onclick="setFilter('level','mini',this)">Mini</button>
+    <button class="tab" onclick="setFilter('level','bold',this)">Bold</button>
+    <button class="tab" onclick="setFilter('level','scary',this)">Scary Setting</button>
+    <button class="tab" onclick="setFilter('level','progression',this)">Date Track</button>
+    <button class="tab" onclick="setFilter('level','coochie',this)">Coochie Card</button>
+    <button class="tab" onclick="setFilter('level','bonus',this)">Bonus</button>
+    <button class="tab" onclick="setFilter('level','hardmode',this)">Hard Mode</button>
+    <button class="tab" onclick="setFilter('level','bombshell',this)">💣 Bombshell</button>
+    <button class="tab" onclick="setFilter('level','wildcard',this)">🃏 Wildcard</button>
+    <button class="tab" onclick="setFilter('level','friend',this)">🌿 Friends</button>
+    <button class="tab" onclick="setFilter('level','networking',this)">🔗 Networking</button>
+  </div>
+  <p class="filter-label">By venue</p>
+  <div class="tabs" id="venueTabs">
+    <button class="tab active" onclick="setFilter('venue','all',this)">All Venues</button>
+    <button class="tab" onclick="setFilter('venue','museum',this)">Museum Events</button>
+    <button class="tab" onclick="setFilter('venue','southhouse',this)">South House</button>
+    <button class="tab" onclick="setFilter('venue','church',this)">Church</button>
+    <button class="tab" onclick="setFilter('venue','scary',this)">Scary Settings</button>
+    <button class="tab" onclick="setFilter('venue','anywhere',this)">Anywhere</button>
+    <button class="tab" onclick="setFilter('venue','dj',this)">DJ / Nightlife</button>
+    <button class="tab" onclick="setFilter('venue','fitness',this)">Fitness Class</button>
+    <button class="tab" onclick="setFilter('venue','bookstore',this)">Bookstore</button>
+    <button class="tab" onclick="setFilter('venue','winebar',this)">Wine Bar</button>
+    <button class="tab" onclick="setFilter('venue','bougie',this)">Bougie IYKYK</button>
+    <button class="tab" onclick="setFilter('venue','sports',this)">Sports / Watch Party</button>
+    <button class="tab" onclick="setFilter('venue','festival',this)">Festival / Live Music</button>
+    <button class="tab" onclick="setFilter('venue','gallery',this)">Gallery Opening</button>
+    <button class="tab" onclick="setFilter('venue','sapphic',this)">Sapphic Nightlife</button>
+    <button class="tab" onclick="setFilter('venue','outdoor',this)">Outdoor / Market</button>
+    <button class="tab" onclick="setFilter('venue','improv',this)">Improv / Class</button>
+    <button class="tab" onclick="setFilter('venue','retreat',this)">Retreat</button>
+    <button class="tab" onclick="setFilter('venue','political',this)">Political Event</button>
+    <button class="tab" onclick="setFilter('venue','dancing',this)">Social Dancing</button>
+    <button class="tab" onclick="setFilter('venue','climbing',this)">Rock Climbing</button>
+    <button class="tab" onclick="setFilter('venue','gaming',this)">Game Night</button>
+    <button class="tab" onclick="setFilter('venue','writing',this)">Writing Workshop</button>
+    <button class="tab" onclick="setFilter('venue','art',this)">Art Social</button>
+    <button class="tab" onclick="setFilter('venue','leftist',this)">Workshop / Training</button>
+    <button class="tab" onclick="setFilter('venue','houseprty',this)">House Party</button>
+    <button class="tab" onclick="setFilter('venue','chess',this)">Chess / Strategy</button>
+    <button class="tab" onclick="setFilter('venue','pride',this)" style="border-color:rgba(196,79,232,0.4);color:var(--accent);">🏳️‍🌈 Pride</button>
+  </div>
+</div>
+
+<!-- DEAL BUTTONS -->
+<div class="deal-bar">
+  <button class="deal-btn" onclick="dealRandom()">Deal me one →</button>
+  <button class="deal-btn" onclick="dealWarmUp()">I need a warm-up →</button>
+  <button class="deal-btn" onclick="dealApproach()">Approach card →</button>
+  <button class="deal-btn" onclick="dealBombshell()" style="border-color:var(--coral);color:var(--coral);">💣 Bombshell →</button>
+  <button class="deal-btn" onclick="dealWildcard()">🃏 Wildcard →</button>
+</div>
+
+
+
+<!-- FEATURED -->
+<div class="featured" id="featured">
+  <p class="featured-label">Your card</p>
+  <p class="featured-type" id="featType"></p>
+  <p class="featured-text" id="featText"></p>
+  <p class="featured-cue" id="featCue"></p>
+  <div class="featured-venues" id="featVenues"></div>
+</div>
+
+<p class="count-label" id="countLabel"></p>
+<div class="card-grid" id="cardGrid"></div>
+<div class="empty" id="emptyState">No cards match this filter.</div>
+
+<script>
+const cards = [
+
+  // ── BASELINE ──
+  { type:'baseline', label:'Baseline', opener:'Eye Contact', text:'Before you do anything else tonight: make slow, warm eye contact with 10 people. Not a stare — the soft, self-possessed kind. This is your engine. Everything else runs on this.', options:[], cue:'Count them. Ten. Not five. Your phone stays in your bag until you hit ten.', venues:['museum','southhouse','church','anywhere','scary'] },
+  { type:'baseline', label:'Baseline', opener:'Eye Contact', text:'Every time you walk past someone tonight, make eye contact and give the slow smile. Not a grin. The quiet, "I see you" kind. Do it every single time without exception.', options:[], cue:'You are practicing making presence your default, not your performance. There\'s a difference.', venues:['museum','southhouse','church','anywhere','scary'] },
+  { type:'baseline', label:'Baseline', opener:'Eye Contact', text:'Find someone who looked at you first — you know they did — and hold the eye contact instead of looking away. Let them decide what to do with it.', options:[], cue:'Looking away first is a habit, not a reflex. Tonight you break it.', venues:['museum','southhouse','church','anywhere'] },
+  { type:'baseline', label:'Baseline', opener:'Eye Contact', text:'You\'re at a bookstore, gym, gallery, or coffee shop. For the entire visit, keep your eyes open and soft instead of locked on your phone or whatever you\'re doing. Let the room come to you.', options:[], cue:'This is the difference between being seen and being invisible. You control it.', venues:['scary','anywhere'] },
+
+  // ── WARM-UPS ──
+  { type:'warm', label:'Warm-Up', opener:'Compliment', text:'Compliment someone\'s outfit with actual detail. Not "cute fit" — say the specific thing. The color combination. The way they tied the jacket. The shoes with that particular silhouette.', options:[], cue:'Give the compliment and be still. Don\'t immediately introduce yourself. Let them respond first.', venues:['museum','southhouse','church','anywhere'] },
+  { type:'warm', label:'Warm-Up', opener:'Question', text:'Ask three different people what they came for first tonight. See who answers with specifics and who answers with vibes. The specifics people are your people.', options:[], cue:'Approach someone already engaged with something — looking at art, checking a menu, reading. They\'re already open.', venues:['museum','anywhere'] },
+  { type:'warm', label:'Warm-Up', opener:'Observation', text:'Make someone laugh with a real observation about the space — not a rehearsed joke. Something you actually just noticed. About the crowd, the music, the art, the vibe.', options:[], cue:'Timing beats content every time. A sharp observation at the right moment is everything.', venues:['museum','southhouse','church','anywhere'] },
+  { type:'warm', label:'Warm-Up', opener:'Question', text:'Ask someone what their favorite piece is so far. Then ask why. The follow-up is where you actually meet them.', options:[], cue:'Look at them when they answer, not at the piece they\'re pointing to.', venues:['museum','anywhere'] },
+  { type:'warm', label:'Warm-Up', opener:'Compliment', text:'Find someone whose jewelry has a story written on it and ask what that story is. The ring, the pendant, the ear stack — something intentional.', options:[], cue:'Don\'t touch anything. Point lightly. People love talking about pieces that mean something to them.', venues:['museum','southhouse','church','anywhere'] },
+  { type:'warm', label:'Warm-Up', opener:'Question', text:'Ask someone where they\'re from or how they heard about tonight. Then ask the real question: what keeps them coming back to spaces like this.', options:[], cue:'The first question is small talk. The second one is where you find out who they actually are.', venues:['museum','southhouse','church'] },
+  { type:'warm', label:'Warm-Up', opener:'Question', text:'Ask someone vibing to the DJ if they know the song. If they do, you\'re both in it. If they don\'t, you just gave them something.', options:[], cue:'Stand near them before you ask. Don\'t walk all the way over cold — be in proximity first.', venues:['southhouse'] },
+  { type:'warm', label:'Warm-Up', opener:'Compliment', text:'Compliment someone\'s energy or presence specifically. "You have a really settled energy" or "you look like you\'ve been here before in a good way." Not their appearance — their presence.', options:[], cue:'Only say this if you actually mean it. The inauthenticity reads immediately in this crowd.', venues:['museum','church','southhouse','anywhere'] },
+  { type:'warm', label:'Warm-Up', opener:'Spread the News', text:'"You have to see the piece in the next room — it\'s the one that actually stopped me." Give them something before you introduce yourself.', options:[], cue:'Walk in that direction as you say it. If they follow or ask what piece, you\'re already in conversation.', venues:['museum'] },
+  { type:'warm', label:'Warm-Up', opener:'Question', text:'Ask someone what their ideal Saturday looks like from start to finish. The answer tells you almost everything about compatibility.', options:[], cue:'Have your own answer ready. If they ask you back and you stumble, the energy deflates.', venues:['southhouse','museum','anywhere'] },
+  { type:'warm', label:'Warm-Up', opener:'Compliment', text:'Compliment someone\'s Easter outfit with the kind of specificity that shows you actually looked. Church crowd dresses intentionally. Let them know you saw it.', options:[], cue:'Specific compliments in this space carry more weight because people dressed for a reason today.', venues:['church'] },
+
+  // ── APPROACH: SOMEONE YOU FIND ATTRACTIVE ──
+  { type:'approach', label:'Approach: Someone You Find Attractive', opener:'Wave Over',
+    text:'You see her across the room. Don\'t walk all the way over cold. Instead: make eye contact, hold it one beat past comfortable, then do a slow half-smile and a subtle head tilt — the kind that says "come here." Let her decide to move.',
+    options:[
+      { label:'If they hold the eye contact back', text:'That\'s a green light. Give it five seconds, then do the wave. Slow. Deliberate. Not frantic.' },
+      { label:'If she smiles but doesn\'t move', text:'That\'s not a no. That\'s shy. You may need to be the one who closes the distance — but now you know it\'s welcome.' },
+      { label:'If they look away and doesn\'t look back', text:'That\'s a read. Don\'t push. Stay in your lane and let the night continue.' }
+    ],
+    cue:'The wave is not a summons. It\'s an invitation. The energy behind it is "I\'d like to talk to you" not "get over here."', venues:['museum','southhouse','anywhere'] },
+
+  { type:'approach', label:'Approach: Someone You Find Attractive', opener:'Observation',
+    text:'You\'re near them — not across the room. You both happen to be looking at the same thing. Say something true about it out loud, to no one in particular. She\'ll respond if she\'s interested. You didn\'t "approach" — you just started talking.',
+    options:[
+      { label:'At a gallery', text:'"This one is doing something I don\'t fully understand yet." Leave it open.' },
+      { label:'At South House', text:'"Whoever curated this playlist actually knows what they\'re doing." Then look at them.' },
+      { label:'In line anywhere', text:'Comment on the wait, the menu, the space. Something real. Not a line.' }
+    ],
+    cue:'This is the no-pressure approach. You\'re not walking up to them — you\'re just being present near them and letting conversation be natural.', venues:['museum','southhouse','anywhere','scary'] },
+
+  { type:'approach', label:'Approach: Someone You Find Attractive', opener:'Sprinkle Value',
+    text:'You know something about this space, this artist, this venue, this event that she might not. Drop it near them — not at them. "This artist is actually from Bed-Stuy, which makes this piece hit differently." Then pause.',
+    options:[
+      { label:'They respond with curiosity', text:'You\'re in. Continue. Don\'t over-explain — give them room to engage.' },
+      { label:'She nods and moves on', text:'Respect it. You weren\'t rejected — you just weren\'t her moment right now.' }
+    ],
+    cue:'You\'re not trying to impress her. You\'re sharing something real. The difference is in your body language — open, not performing.', venues:['museum','southhouse','anywhere'] },
+
+  { type:'approach', label:'Approach: Someone You Find Attractive', opener:'Hi + Eye Contact',
+    text:'She\'s close enough. You don\'t need a reason. Full eye contact, slow smile, say hi. Then wait. The silence after "hi" is the entire move — don\'t fill it with a prepared line.',
+    options:[
+      { label:'They say hi back and holds your gaze', text:'Ask one genuine question. Not "what\'s your name" first — something about the moment you\'re both in.' },
+      { label:'They say hi and looks away', text:'Give her a beat. If they look back, she\'s thinking about it. If she doesn\'t, she\'s given you the answer.' }
+    ],
+    cue:'You\'re not auditioning. You\'re just introducing your presence. "Hi" said slowly with full eye contact is a complete move.', venues:['museum','southhouse','church','anywhere'] },
+
+  { type:'approach', label:'Approach: Someone You Find Attractive', opener:'Compliment',
+    text:'Walk close enough to say something — not from across the room, not over a crowd. Say the specific thing you noticed. Then make eye contact and let it land before you say anything else.',
+    options:[
+      { label:'Something she made or chose', text:'Her bag, her earrings, her shoes — not their face. Something she decided to wear.' },
+      { label:'Something she\'s doing', text:'The way she looked at a piece. The way she\'s moving on the floor. Something real-time.' },
+      { label:'Something she said nearby', text:'You were close enough to overhear. "That was actually the smartest take I\'ve heard tonight."' }
+    ],
+    cue:'Compliment and be still. Don\'t immediately pivot to "I\'m Kay, I do—" Let her respond to the compliment first.', venues:['museum','southhouse','church','anywhere'] },
+
+  // ── INTRO: INTRODUCING YOURSELF AT A SOCIAL EVENT ──
+  { type:'intro', label:'Introduction', opener:'Observation',
+    text:'Don\'t lead with your name. Lead with something real. A response to the space, the conversation, the moment. Let yourself be interesting first. Then, when it feels natural — maybe 60 seconds in — say your name like it\'s a gift, not a business transaction.',
+    options:[
+      { label:'At a gallery or museum event', text:'"This is the third First Saturday I\'ve been to and the energy is always completely different. I\'m Kay." Then look at them like you\'re actually curious.' },
+      { label:'At South House', text:'"I just got here and somehow the food is already gone? I\'m Kay." Then laugh at the situation together.' },
+      { label:'At a panel or lecture', text:'React to something from the event. "That last speaker said something I\'m still chewing on." Then introduce yourself.' }
+    ],
+    cue:'Your name is not the beginning of the conversation. It\'s the confirmation that you want there to be more of it.', venues:['museum','southhouse','church','anywhere'] },
+
+  { type:'intro', label:'Introduction', opener:'Casually Cut In',
+    text:'Join a group conversation in progress. Contribute something that actually moves the conversation forward — a question, a take, a laugh. Then introduce yourself as a natural extension of that. "I\'m Kay by the way — I\'ve been eavesdropping for a minute."',
+    options:[],
+    cue:'Wait for a genuine opening — a pause, a question nobody answered, a moment where adding something makes sense. Don\'t interrupt. Arrive.', venues:['museum','southhouse','church','anywhere'] },
+
+  { type:'intro', label:'Introduction', opener:'Question',
+    text:'Ask a question that makes them want to answer. When they do and the conversation finds a rhythm, offer your name as punctuation — not as an intro. "I\'m Kay. What you just said about—"',
+    options:[
+      { label:'For a filmmaker-to-filmmaker moment', text:'"Are you in the industry or just obsessed with it like the rest of us?"' },
+      { label:'For a queer cultural space', text:'"How did you find this place? These are always the best kept secrets."' },
+      { label:'For anywhere', text:'"What brought you out tonight specifically?" People always have a real answer.' }
+    ],
+    cue:'The question is the introduction. Your name is just the closing credit.', venues:['museum','southhouse','church','anywhere'] },
+
+  // ── SCARY SETTING ──
+  { type:'scary', label:'Scary Setting', opener:'Observation',
+    text:'You\'re at the gym, a bookstore, a coffee shop, a farmers market — somewhere with no social script. You find someone interesting. The move: say something true about where you both are. Not a pickup line. An observation. One sentence. Then be quiet.',
+    options:[
+      { label:'Bookstore', text:'"I\'ve been standing in front of this section for 10 minutes. I either need all of these or none of them." Then look at them.' },
+      { label:'Gym', text:'Wait until she\'s not in the middle of a set. "You clearly know what you\'re doing with that — are you a trainer or just disciplined?" Light. No pressure.' },
+      { label:'Coffee shop', text:'"I always end up at this table. I think there\'s a good light thing happening here." She\'s either in or she\'s not.' },
+      { label:'Farmers market / outdoor event', text:'Comment on a vendor, a weird item, something funny. "I\'ve been staring at this hot sauce for five minutes trying to decide if I\'m brave enough." She\'ll tell you if she is.' }
+    ],
+    cue:'The scary setting is only scary because there\'s no social cover. But that\'s also why it works — when you speak first in a "quiet" space, it lands harder.', venues:['scary','anywhere'] },
+
+  { type:'scary', label:'Scary Setting', opener:'Question',
+    text:'You\'re at a film screening, a lecture, an opening — something intellectual. You\'ve spotted someone. Wait until the intermission or the end. Then ask them what they thought. Not "did you like it" — what they actually thought.',
+    options:[
+      { label:'After a screening', text:'"What did you make of the ending? I\'m still processing it." That\'s a real question from a real filmmaker.' },
+      { label:'After a lecture or panel', text:'"The second speaker said something that\'s still bothering me — did you catch that part?" If she was there, she has a take.' },
+      { label:'At a gallery opening', text:'"I keep coming back to this one piece and I don\'t know why. Do you get that with any of these?" She\'ll show you which one.' }
+    ],
+    cue:'These are Kay questions. You\'re not doing a bit — you\'re being yourself, which is more interesting than any opener.', venues:['scary','museum','anywhere'] },
+
+  { type:'scary', label:'Scary Setting', opener:'Sprinkle Value',
+    text:'Go to a new social venue or event specifically to meet people — not to hang with who you know. Before you go, identify one thing you know about that space or community that most people there won\'t. Use it to open a conversation.',
+    options:[
+      { label:'At a queer bookstore event', text:'"The author they\'re featuring tonight is actually also a filmmaker — there\'s a short she did that\'s worth finding." Drop it near someone interesting.' },
+      { label:'At an arts opening', text:'"The artist behind this show is also in a collective that\'s doing a residency in Newark right now — that context changes how I see this work."' }
+    ],
+    cue:'You don\'t have to know everything. You just have to know one thing nobody else thought to bring. That\'s enough.', venues:['scary','museum','anywhere'] },
+
+  // ── IN LINE / WAITING AREA ──
+  { type:'warm', label:'In Line / Waiting Area', opener:'Observation',
+    text:'You\'re both waiting. That\'s the only opener you need. Say something true about the situation — the wait, the space, what you\'re both about to experience. You don\'t need to be clever. You need to be present.',
+    options:[
+      { label:'Long line', text:'"This line is either worth it or we\'re both about to find out a lot about ourselves." Then look at them with a smile.' },
+      { label:'Waiting for an event to start', text:'"I always get here too early and then have to just exist near strangers. I\'m Kay."' },
+      { label:'Coffee line', text:'"I come here when I need to think. Which means I need to think a lot." Let her take it wherever she wants.' },
+      { label:'Museum queue', text:'"I read that the second floor is actually the move tonight. Have you been here before?"' }
+    ],
+    cue:'Lines are equalizers. You\'re both in the same position, literally. Use that. There\'s no hierarchy in a line.', venues:['museum','southhouse','church','anywhere','scary'] },
+
+  // ── MINI ──
+  { type:'mini', label:'Mini Challenge', opener:'Wave Over', text:'Make extended eye contact with someone across the room. Hold it a beat past comfortable. Then do a slow wave — not a frantic one. Let them come to you. Then you speak first.', options:[], cue:'Look away once, look back, then wave. The look-away creates tension. The return creates invitation.', venues:['southhouse','museum','anywhere'] },
+  { type:'mini', label:'Mini Challenge', opener:'Question', text:'Ask someone to be your museum guide for 10 minutes. They pick the pieces, you ask the questions. Frame it as a gift to them — "You seem like you actually know this space."', options:[], cue:'Most people love being the expert. You\'re giving her permission to show you something.', venues:['museum'] },
+  { type:'mini', label:'Mini Challenge', opener:'Observation', text:'Tell someone they remind you of a specific piece in the room and explain exactly why. Make it specific and non-obvious. The comparison should feel like something she\'s never heard before.', options:[], cue:'This lands because it requires you to actually look at them and actually look at the work. She\'ll feel that.', venues:['museum'] },
+  { type:'mini', label:'Mini Challenge', opener:'Question', text:'Propose a two-person art critique. Pick a piece together and each defend a different reading of it. Disagreement is more interesting than agreement.', options:[], cue:'Let her go first. Listen without planning your response. Then give yours.', venues:['museum'] },
+  { type:'mini', label:'Mini Challenge', opener:'Question', text:'Ask someone their hottest take on the exhibit, the DJ, the event. Don\'t automatically validate it. Have your own take.', options:[], cue:'A real response — agreement or pushback — is more attractive than "yes, totally." You have opinions. Use them.', venues:['museum','southhouse'] },
+  { type:'mini', label:'Mini Challenge', opener:'Question', text:'Swap Instagram handles with three different people tonight — not numbers. Lower stakes. Still an exchange. Have yours ready to show.', options:[], cue:'Make the trade quick and easy. "Follow me, I think you\'d like my work" is better than "can I have your handle?"', venues:['museum','southhouse','anywhere'] },
+  { type:'mini', label:'Mini Challenge', opener:'Question', text:'Ask someone what they\'re manifesting this season. Then ask what they\'re doing to meet it halfway. The second question separates the dreamers from the builders.', options:[], cue:'Have your own answer. If you can\'t answer it, don\'t ask it.', venues:['museum','southhouse','church','anywhere'] },
+  { type:'mini', label:'Mini Challenge', opener:'Question', text:'Ask someone what they do for work and follow up immediately with: "Do you actually love it?" Watch their face before they answer.', options:[], cue:'Almost no one gets asked if they love it. You just became the most interesting person in the room.', venues:['southhouse','museum','anywhere'] },
+  { type:'mini', label:'Mini Challenge', opener:'Question', text:'Ask someone what they do outside of their job or identity. "What\'s the part of you that nobody asks about?" Give them the question as a gift.', options:[], cue:'Filmmakers, photographers, and creatives all have this part. So do accountants. Let her show you.', venues:['museum','southhouse','church','anywhere'] },
+  { type:'mini', label:'Mini Challenge', opener:'Question', text:'Find a couple and ask how they met. Good intel, good energy, great warmup for talking to strangers.', options:[], cue:'Let them tell the whole story. You\'ll learn something about what you want.', venues:['museum','southhouse','anywhere'] },
+
+  // ── BOLD ──
+  { type:'bold', label:'Bold Move', opener:'Question', text:'Ask someone straight up if they\'d want to grab something to eat after this. Be specific. "There\'s a spot on Flatbush I\'ve been meaning to try." Specific is confident. Vague is testing the water.', options:[], cue:'Don\'t do this in the first five minutes. Earn the ask. Then make it clean and direct.', venues:['museum','southhouse','anywhere'] },
+  { type:'bold', label:'Bold Move', opener:'Observation', text:'Tell someone directly: "I noticed you when I walked in." Don\'t explain it. Don\'t smile through it nervously. Say it simply and let it land.', options:[], cue:'If she smiles, keep going. If she deflects, respect it and move. Grace is attractive. Insisting is not.', venues:['museum','southhouse','anywhere'] },
+  { type:'bold', label:'Bold Move', opener:'Question', text:'Ask someone what they\'re avoiding in their love life right now. Not in general — right now, this season.', options:[], cue:'Only ask this if you\'re willing to answer it yourself when they ask you back. And she will.', venues:['museum','southhouse','anywhere'] },
+  { type:'bold', label:'Bold Move', opener:'Question', text:'Ask someone what their non-negotiables are. Not dealbreakers — non-negotiables. Let her feel the difference.', options:[], cue:'Have yours ready. Answer without hedging when they ask.', venues:['museum','southhouse','anywhere'] },
+  { type:'bold', label:'Bold Move', opener:'Question', text:'Propose something specific with someone you\'ve genuinely vibed with. A gallery opening. A screening. A show. Something real and dateable with a date attached.', options:[], cue:'"We should hang sometime" is forgettable. "There\'s an opening at the Studio Museum next Friday" is not.', venues:['museum','southhouse','anywhere'] },
+  { type:'bold', label:'Bold Move', opener:'Question', text:'Share something real about yourself unprompted — not trauma, not a resume item. Something true and textured. A thing you\'re working through, something you noticed about yourself recently.', options:[], cue:'Vulnerability is a move when it\'s chosen. You\'re not confessing. You\'re offering.', venues:['museum','southhouse','church','anywhere'] },
+  { type:'bold', label:'Bold Move', opener:'Question', text:'Ask someone what city they\'d move to for love and why. Have your own answer. This question opens people up fast.', options:[], cue:'If they say a city you\'ve thought about — or one that surprises you — you have a whole conversation.', venues:['museum','southhouse','anywhere'] },
+  { type:'bold', label:'Bold Move', opener:'Question', text:'Ask someone what their faith journey has looked like. Church crowd answers this with their whole chest.', options:[], cue:'Don\'t share yours immediately. Be the listener first. Let her take up the space.', venues:['church'] },
+  { type:'bold', label:'Bold Move', opener:'Change It Up', text:'Ask someone to dance with you for one song. Stand in front of her — not beside her. Make the ask direct and easy. "One song?"', options:[], cue:'If you get a no, thank her and keep moving. Grace is everything. A graceful no-response is more attractive than an awkward push.', venues:['southhouse'] },
+
+  // ── DATE PROGRESSION ──
+  { type:'progression', label:'Date Track', opener:'Question', text:'You\'ve been talking for 15+ minutes. The energy is good. Drop a soft pitch before the night ends: "I\'ve been meaning to go to [specific thing]. That seems like something you\'d actually have a take on."', options:[], cue:'Don\'t ask "would you want to come?" yet. Plant the seed. Gauge her reaction. If she leans in, ask.', venues:['museum','southhouse','anywhere'] },
+  { type:'progression', label:'Date Track', opener:'Spread the News', text:'You met her earlier at an event. You followed each other online. Now you see something she\'d care about — a screening, an opening, a panel. Send it with context. Not "hey!" Just the thing and why you thought of her.', options:[], cue:'The follow-through after the night is where most people drop the ball. You won\'t.', venues:['anywhere'] },
+  { type:'progression', label:'Date Track', opener:'Question', text:'You\'ve confirmed a plan. 48 hours before: send a short message confirming the details and adding one specific thing you\'re looking forward to. Not "can\'t wait!" Something real.', options:[], cue:'"I\'ve been thinking about that question you asked and I have a better answer now" is a real confirmation message.', venues:['anywhere'] },
+  { type:'progression', label:'Date Track', opener:'Observation', text:'You\'re on the date. You\'re a filmmaker and a photographer — you see things ottheir people don\'t. Tell her one thing you noticed about the space or the moment that nobody else would have said. That\'s your power move.', options:[], cue:'The date is just a longer version of everything you already do. You\'re good at this. Show up like you know that.', venues:['anywhere'] },
+
+  // ── COOCHIE CARD ──
+  { type:'coochie', label:'Coochie Card', opener:'Hi + Eye Contact', text:'You genuinely felt something — the conversation moved, the energy was real, she made you think. End by pulling your card and saying: "I\'d actually like to keep talking to you." Then hand it. Don\'t explain the card.', options:[], cue:'Slow down before you hand it. The pause before the card is what makes it land.', venues:['museum','southhouse','anywhere'] },
+  { type:'coochie', label:'Coochie Card', opener:'Observation', text:'After a real conversation, say: "You should reach out." Then hand the card. Let her decide when. You\'ve already done your part.', options:[], cue:'Don\'t apologize for the card. Don\'t explain it. It\'s a fact about you.', venues:['museum','southhouse','anywhere'] },
+  { type:'coochie', label:'Coochie Card', opener:'Compliment', text:'"I don\'t hand these out often." Then hand it. One sentence. No elaboration.', options:[], cue:'True only if you actually don\'t hand them out often. The card\'s power is its scarcity.', venues:['museum','southhouse','anywhere'] },
+  { type:'coochie', label:'Coochie Card', opener:'Question', text:'You asked her to follow you on Instagram and it clicked. Now offer the card as a second move. "And this — in case you want to reach me directly."', options:[], cue:'Instagram is the preview. The card is the invitation.', venues:['museum','southhouse','anywhere'] },
+
+  // ── BONUS ──
+  { type:'bonus', label:'Bonus', opener:'Observation', text:'Find someone who looks like Ryan Destiny, Sydney Colson, Deto Black, Laura Harrier, or Gio Ramos and tell them exactly which one and exactly why. Be prepared — the conversation that follows will be the whole night.', options:[], cue:'Have your case ready. Be specific. It becomes the whole thing.', venues:['southhouse','museum','anywhere'] },
+  { type:'bonus', label:'Bonus', opener:'Question', text:'Propose a group hang with three people you met at separate points in the night. Introduce them to each other with a genuine reason why they should meet. You become the connector.', options:[], cue:'Connector energy is very attractive. You\'re not orbiting — you\'re building the room.', venues:['southhouse','museum','anywhere'] },
+  { type:'bonus', label:'Bonus', opener:'Question', text:'Ask someone what they\'re reading, watching, or listening to that changed something for them recently. Then actually engage with the answer like a filmmaker who cares about story.', options:[], cue:'You know how to talk about film, photography, and visual culture in a way most people don\'t. Use that.', venues:['museum','church','southhouse','anywhere'] },
+  { type:'bonus', label:'Bonus', opener:'Question', text:'Ask someone what show or film they\'ve rewatched the most. Then ask them why they think they keep going back. That question will tell you everything.', options:[], cue:'This is a Kay question. You already know how to have this conversation. It\'s in your wheelhouse.', venues:['museum','southhouse','church','anywhere'] },
+
+  // ── HARD MODE ──
+  { type:'hardmode', label:'Hard Mode', opener:'Change It Up', text:'Spot someone whose hat you genuinely like. Ask if you can try it on. Have them take the photo. Return it with a compliment about what it does for them. This is Hard Mode because in WLW spaces the hat is a whole conversation.', options:[], cue:'Only works if you actually like the hat. The energy of genuine wanting is what keeps it from being weird. Ask easy, receive easy, return gracefully.', venues:['southhouse','museum','anywhere'] },
+  { type:'hardmode', label:'Hard Mode', opener:'Hi + Eye Contact', text:'You\'ve been watching her from across the room for more than 10 minutes. Go over. Tell her that. "I\'ve been looking for an excuse to come over here. I didn\'t need one."', options:[], cue:'Say it simply. Don\'t smile nervously through it. You mean it or you don\'t. If you mean it, it\'s not scary — it\'s just true.', venues:['southhouse','museum','anywhere'] },
+  { type:'hardmode', label:'Hard Mode', opener:'Question', text:'Ask someone what they\'re looking for in a partner — not in general, but right now, this version of them, this season. It\'s a bold question. Earn it first.', options:[], cue:'Don\'t ask this in the first five minutes. It\'s a question for someone who\'s already given you something.', venues:['museum','southhouse','anywhere'] },
+  { type:'hardmode', label:'Hard Mode', opener:'Casually Cut In', text:'Go to a new social venue or event entirely by yourself — no one you know — specifically to meet people. No safety net. Stay for two hours minimum. Talk to at least five people.', options:[], cue:'This is the whole game on hard mode. Every challenge in this deck lives inside this one.', venues:['scary','anywhere'] },
+
+  // ── NEW VENUE CARDS ──
+  { type:'warm', label:'DJ / Nightlife', opener:'Question',
+    text:'Ask someone near you if they know the song. If they do, you\'re both in it. If they don\'t, you just gave them something.',
+    options:[], cue:'Stand near them before you ask. Be in proximity first.',
+    venues:['dj','southhouse','sapphic','festival','anywhere'] },
+  { type:'mini', label:'DJ / Nightlife', opener:'Eye Contact',
+    text:'The DJ keeps finding you in the crowd with their eyes. Hold it for one full bar. Then mouth "thank you" — slow, meant — and turn back to the dance floor.',
+    options:[], cue:'You just ran an entire conversation without moving.',
+    venues:['dj','southhouse','sapphic','festival'] },
+  { type:'bold', label:'DJ / Nightlife: Bold', opener:'Spread the News',
+    text:'Walk up to the booth during a transition — not mid-mix — and make a song request. While you\'re there: "That last set was actually perfect." That\'s the whole thing.',
+    options:[{ label:'They respond warm', text:'Stay thirty seconds max. Let their work. If she plays your song and looks at you when it drops, she got the message.' }, { label:'Post-set', text:'They\'re off the clock. Find her in the room.' }], cue:'The booth is their workspace. Brief, warm, intentional. Post-set she\'s off the clock — that\'s the real window.',
+    venues:['dj','southhouse','sapphic','festival'] },
+  { type:'warm', label:'Fitness Class', opener:'Question',
+    text:'Before class starts — the stretching, the waiting, the rolling-out-mats moment — ask someone nearby what to expect if it\'s your first time, or who their favorite instructor is.',
+    options:[], cue:'First-timer energy is attractive in these spaces. It gives people permission to be the expert.',
+    venues:['fitness','scary','anywhere'] },
+  { type:'mini', label:'Fitness Class', opener:'Compliment',
+    text:'Gym or pilates: catch her in a natural pause — grabbing water, resting, finishing up. "I\'ve been watching your form — are you a trainer or just that disciplined?"',
+    options:[{ label:'They laugh and says neither', text:'So you just figured this out yourself? That\'s interesting.' }, { label:'They say trainer', text:'That tracks. Can I ask you something?' }], cue:'Don\'t approach during a set. Don\'t hover. Catch her in a natural pause.',
+    venues:['fitness','scary'] },
+  { type:'bold', label:'Fitness: Post-Class', opener:'Observation',
+    text:'Heel, pole, or chair class: after class in the cooldown or hallway: "The way you committed to that — I noticed." Specific. Brief. Real.',
+    options:[], cue:'Post-class is the sweet spot. Endorphins up, guards down.',
+    venues:['fitness','improv','anywhere'] },
+  { type:'warm', label:'Bookstore', opener:'Observation',
+    text:'You\'re in the same section. Say something true about it — not a specific book. "I come here when I need to feel like myself again." Then go back to browsing. Let it breathe.',
+    options:[{ label:'They respond', text:'Ask what she\'s looking for. Or what she just finished.' }, { label:'They smile but says nothing', text:'You\'ve been noticed. If you end up near each other again, it\'s an invitation.' }], cue:'Bookstore energy is quiet. Match it. Don\'t be louder than the room.',
+    venues:['bookstore','scary'] },
+  { type:'mini', label:'Bookstore', opener:'Sprinkle Value',
+    text:'You\'re both on the same shelf. Pick up something you\'ve actually read: "This one changed something for me." Hold it out slightly. Then put it back. See if she picks it up.',
+    options:[], cue:'You have real opinions about story and image. Use them.',
+    venues:['bookstore','scary'] },
+  { type:'approach', label:'Bookstore: Queer Section', opener:'Question',
+    text:'"Have you been to any of their events here?" tells you who she is and whether she\'s plugged in. The gaydar is built into the location.',
+    options:[], cue:'Queer bookstores are community spaces. The question is also a soft vetting move.',
+    venues:['bookstore','scary'] },
+  { type:'warm', label:'Wine Bar', opener:'Observation',
+    text:'Wine bars run on slow time and good lighting. When you end up near each other: "Do you know what you\'re having or are you still deciding?" It\'s about the wine and it\'s not about the wine.',
+    options:[], cue:'Wine bar pacing is slow. Let the conversation breathe.',
+    venues:['winebar','anywhere'] },
+  { type:'bold', label:'Wine Bar: Bold', opener:'Put in a Request',
+    text:'You\'ve been making eye contact across the bar. Catch the bartender first and say "whatever she\'s having, add it to mine." Don\'t look at them yet. Let her look at you.',
+    options:[], cue:'When she looks over, raise your glass slightly. That\'s it.',
+    venues:['winebar','anywhere'] },
+  { type:'warm', label:'Bougie IYKYK', opener:'Compliment',
+    text:'In a room full of people pretending not to look at each other, be the one who gives a specific compliment and keeps walking. "That coat is perfect." No follow-up needed. She will remember you.',
+    options:[], cue:'A compliment you don\'t need anything back from is the most powerful kind in this room.',
+    venues:['bougie','gallery','museum','anywhere'] },
+  { type:'bold', label:'Bougie IYKYK: Bold', opener:'Observation',
+    text:'Find someone who looks like they\'re over the performance too. Say something dry and true about the room. She\'ll either get it or she won\'t.',
+    options:[{ label:'They get it', text:'You\'ve found your person for the night. You now have an inside joke about the whole room.' }, { label:'They don\'t', text:'Move on gracefully.' }], cue:'In rooms full of people performing, the person being real stands out immediately.',
+    venues:['bougie','gallery','museum','winebar','anywhere'] },
+  { type:'scary', label:'Bougie: Alone', opener:'Change It Up',
+    text:'You\'re alone and the room is cliqued up. Don\'t perform ease — just move through the room like you\'re looking for something genuinely interesting. Stop when you find it. Look at it for real. Someone will come to you.',
+    options:[], cue:'People in these rooms are watching even when they look like they\'re not.',
+    venues:['bougie','gallery','museum','anywhere'] },
+  { type:'warm', label:'Sports / Watch Party', opener:'Question',
+    text:'You\'re learning sports. That\'s the opener. "I\'m still figuring this out — can you explain what just happened?" People who love sports love being asked about sports.',
+    options:[], cue:'Don\'t fake knowledge you don\'t have. The learning curve is endearing.',
+    venues:['sports','anywhere'] },
+  { type:'mini', label:'Sports / Watch Party', opener:'Observation',
+    text:'Watch parties have built-in shared emotional moments. When one happens, look at whoever is near you and react together. That shared reaction is an instant bond. Then introduce yourself.',
+    options:[], cue:'"Did you SEE that?" You don\'t have to know what you saw. Just react honestly.',
+    venues:['sports','anywhere'] },
+  { type:'bold', label:'Sports: Bold', opener:'Question',
+    text:'"Who\'s your team?" is the whole opener. If she has one, she\'ll tell you for twenty minutes. If she doesn\'t, you have something in common.',
+    options:[], cue:'Sports loyalty is identity. Ask about it like it matters.',
+    venues:['sports','anywhere'] },
+  { type:'warm', label:'Festival / Live Music', opener:'Observation',
+    text:'React to something in the set out loud — not to them specifically, just out loud. "Oh she did NOT just—" and let whoever is near you finish the thought.',
+    options:[], cue:'You\'re both already in something together. You don\'t need a separate reason to talk.',
+    venues:['festival','dj','anywhere'] },
+  { type:'bold', label:'Festival: Bold', opener:'Put in a Request',
+    text:'"Is this the one you came for?" If it is, you just found out. If it\'s not, she\'ll tell you which one she\'s waiting for. Now you\'re waiting together.',
+    options:[], cue:'Shared anticipation is intimacy.',
+    venues:['festival','dj','anywhere'] },
+  { type:'warm', label:'Gallery Opening', opener:'Observation',
+    text:'Stand in front of a piece and let yourself feel something about it. If someone ends up near you, say what you actually think — not what sounds smart, what you actually think.',
+    options:[], cue:'You see things in images that most people don\'t. This is your native terrain.',
+    venues:['gallery','museum','anywhere'] },
+  { type:'mini', label:'Gallery Opening', opener:'Sprinkle Value',
+    text:'"The way she\'s using negative space here — I keep thinking about Wong Kar-wai for some reason." Drop it near someone interesting. Not a lecture — a thought you had.',
+    options:[], cue:'Art spaces reward the person who has done the reading. You have.',
+    venues:['gallery','museum','anywhere'] },
+  { type:'bold', label:'Sapphic Nightlife', opener:'Hi + Eye Contact',
+    text:'The sapphic scene is small and everyone will see each other again. A slow, warm, direct "hi" with full eye contact lands harder than any line. Everyone is already reading everyone.',
+    options:[], cue:'Be clear, be warm, don\'t be weird about it if it doesn\'t land.',
+    venues:['sapphic','dj','southhouse'] },
+  { type:'scary', label:'Sapphic: New to the Scene', opener:'Casually Cut In',
+    text:'Find someone at the edge of a conversation — not the center — and stand near them. Comment on something happening in the room. You\'re talking to one person who happens to be near a clique.',
+    options:[], cue:'Most people in small queer spaces are relieved to meet someone new who isn\'t drama.',
+    venues:['sapphic','dj','southhouse'] },
+  { type:'mini', label:'Sapphic Nightlife', opener:'Observation',
+    text:'In a space where everyone knows everyone, be the person having the most fun, not the most game. The introductions will come to you.',
+    options:[], cue:'Low volume, high discernment, high pleasure. Let the room come to you a little.',
+    venues:['sapphic','dj','southhouse','anywhere'] },
+  { type:'warm', label:'Outdoor / Farmers Market', opener:'Spread the News',
+    text:'"The honey vendor in the back is the one — she\'s almost sold out." Give her something useful before you introduce yourself. Walk that direction.',
+    options:[], cue:'Markets are transactional spaces made warm by the people in them.',
+    venues:['outdoor','anywhere'] },
+  { type:'warm', label:'Walk / Run Club', opener:'Observation',
+    text:'Fall into pace near someone and comment on the route, the weather, the playlist. You don\'t have to start a conversation — just join one that\'s already happening.',
+    options:[], cue:'Stay after for the cooldown stretch — that\'s where actual conversations happen.',
+    venues:['outdoor','fitness','anywhere'] },
+  { type:'warm', label:'Improv Class', opener:'Observation',
+    text:'Use the post-exercise cooldown to say something real about what just happened. "That scene went somewhere I did not expect." Then look at whoever was in it with you.',
+    options:[], cue:'Improv attracts people who want to be present. That\'s already a filter.',
+    venues:['improv','scary','anywhere'] },
+  { type:'mini', label:'Improv Class', opener:'Compliment',
+    text:'After someone does something brave in a scene: "The way you committed to that was the best thing that happened in class today." Don\'t qualify it.',
+    options:[], cue:'Improv people respond to being seen for their choices.',
+    venues:['improv','anywhere'] },
+  { type:'warm', label:'Retreat', opener:'Observation',
+    text:'Sit in a visible spot. Be genuinely at ease. Let eye contact happen naturally. If someone sits near you, say something soft and real about the experience so far.',
+    options:[], cue:'Retreat energy is inward. The conversations here go very deep very fast.',
+    venues:['retreat','anywhere'] },
+  { type:'bold', label:'Retreat: Bold', opener:'Question',
+    text:'"What brought you here?" Not what do you do — what brought you here, to this particular retreat, this weekend, this version of yourself.',
+    options:[], cue:'People at retreats are in a real moment of their lives. The question honors that.',
+    venues:['retreat','anywhere'] },
+  { type:'warm', label:'Political Event', opener:'Question',
+    text:'After a speaker or panel, ask someone what landed for them most — not what they thought, what landed. That separates the people who are there to be seen from the ones who are actually in it.',
+    options:[], cue:'This crowd is paying attention. Be someone who is also paying attention.',
+    venues:['political','anywhere'] },
+  { type:'approach', label:'Political Event: Approach', opener:'Observation',
+    text:'Abolitionist, queer, or Black liberation spaces have a high concentration of your people. "I keep seeing you in these spaces and I\'ve been meaning to introduce myself."',
+    options:[], cue:'Movement spaces are community spaces. Relationship-building here is part of the point.',
+    venues:['political','anywhere'] },
+  { type:'warm', label:'Social Dancing', opener:'Question',
+    text:'Before the floor opens up, ask someone nearby if they prefer leading or following. The answer tells you a lot and opens everything.',
+    options:[], cue:'Dancing communities are warm by design. The ask to dance is built into the format.',
+    venues:['dancing','dj','southhouse','sapphic','festival','anywhere'] },
+  { type:'mini', label:'Social Dancing', opener:'Put in a Request',
+    text:'"Dance with me for this one." Not "do you want to dance?" — that invites a yes/no. If they say no, thank her and find the floor anyway.',
+    options:[], cue:'The ask to dance in a dance space is never weird.',
+    venues:['dancing','dj','southhouse','sapphic','festival'] },
+  { type:'bold', label:'Social Dancing: Bold', opener:'Change It Up',
+    text:'You\'re already on the floor. Between songs, while everyone mills around: look at them and extend your hand. No words. Let the gesture be the whole sentence.',
+    options:[], cue:'The nonverbal ask on a dance floor is its own language. You already know it.',
+    venues:['dancing','dj','southhouse','sapphic','festival'] },
+  { type:'warm', label:'Rock Climbing', opener:'Question',
+    text:'"What\'s your project right now?" is the insider version of asking what route they\'re working on. Climbers love talking about climbing.',
+    options:[], cue:'This question gets you five minutes minimum.',
+    venues:['climbing','fitness','scary','anywhere'] },
+  { type:'mini', label:'Rock Climbing', opener:'Sprinkle Value',
+    text:'Offer beta only if she\'s clearly stuck and you\'ve done the route. Ask first: "Want a tip?" Then only if yes.',
+    options:[], cue:'Unsolicited beta is climbing\'s version of a know-it-all.',
+    venues:['climbing','fitness','anywhere'] },
+  { type:'bold', label:'Rock Climbing: Bold', opener:'Question',
+    text:'"A group of us are going to [nearby spot] after — you should come." Climbing socials happen organically. Be the one who makes it intentional.',
+    options:[], cue:'Post-climb hangs are common. Extending the invitation is normal here.',
+    venues:['climbing','outdoor','anywhere'] },
+  { type:'warm', label:'Game Night', opener:'Observation',
+    text:'Sit near someone interesting and make a genuine observation about the game or the chaos around you. Everyone is there to play together. You don\'t need a separate opener.',
+    options:[], cue:'Curiosity and a sense of humor get you further than expertise in these rooms.',
+    venues:['gaming','anywhere'] },
+  { type:'mini', label:'Chess / Strategy', opener:'Question',
+    text:'"I\'m terrible at this but I\'m trying to get better — would you show me something?" People who love chess love teaching it.',
+    options:[{ label:'She plays casually', text:'Play a game. Let her beat you. Ask questions while she does.' }, { label:'They\'re serious', text:'"What would you want someone to understand about this game who doesn\'t play yet?"' }], cue:'The learning curve is the opener. You don\'t have to pretend to know more.',
+    venues:['chess','gaming','anywhere','scary'] },
+  { type:'bold', label:'D&D / Tabletop: Bold', opener:'Question',
+    text:'Find the person who seems most alive in the game and ask what their character\'s actual motivation is.',
+    options:[], cue:'Tabletop players have rich inner lives and will tell you about them if asked well.',
+    venues:['gaming','improv','anywhere'] },
+  { type:'warm', label:'Writing Workshop', opener:'Question',
+    text:'Ask someone what they\'re working on right now — not what they write, but what they\'re actually working on right now.',
+    options:[], cue:'Writers respond to being asked about their current work, not their credentials.',
+    venues:['writing','improv','anywhere'] },
+  { type:'mini', label:'Writing Workshop', opener:'Compliment',
+    text:'After a share or reading: find the one thing that actually landed for you and tell them that specifically. Not "I loved it" — the specific image, line, or moment.',
+    options:[], cue:'Specific literary compliments are intimacy. You have opinions about language.',
+    venues:['writing','improv','anywhere'] },
+  { type:'warm', label:'Art Social', opener:'Observation',
+    text:'Look at what someone is making and say something true: "I like what\'s happening with that" or "yours is already better than mine and we\'re ten minutes in."',
+    options:[], cue:'Art social energy is loose and permission-giving. People are happy to laugh at themselves.',
+    venues:['art','improv','museum','gallery','anywhere'] },
+  { type:'mini', label:'Art Social', opener:'Question',
+    text:'Ask someone what they do with their work after — do they keep it, give it away, throw it out. More interesting than "do you do this a lot?"',
+    options:[], cue:'You already have a relationship with what happens to images after they\'re made.',
+    venues:['art','gallery','museum','writing','anywhere'] },
+  { type:'warm', label:'Workshop / Training', opener:'Question',
+    text:'Self-defense, abolitionist workshops, mutual aid: after a session, ask someone what they\'re taking away or what brought them there.',
+    options:[], cue:'People in these spaces are there because they care about something. Ask about the thing.',
+    venues:['leftist','political','anywhere'] },
+  { type:'bold', label:'Workshop: Bold', opener:'Casually Cut In',
+    text:'Find the person who said something in the workshop that you actually responded to and tell them: "What you said about — I\'m still thinking about that." Then ask them to say more.',
+    options:[], cue:'The post-event debrief is where the real connections happen.',
+    venues:['leftist','political','writing','improv','anywhere'] },
+  { type:'warm', label:'House Party', opener:'Question',
+    text:'"How do you know the host?" The answer branches immediately into real conversation. Follow the branch.',
+    options:[{ label:'She knows them from work', text:'Ask what she does. Then ask if she loves it.' }, { label:'They\'re also a plus one', text:'You\'re both strangers. That\'s already a bond.' }, { label:'She knows them from years back', text:'"What were they like when they were younger?"' }], cue:'Every answer leads somewhere real if you follow it.',
+    venues:['houseprty','anywhere'] },
+  { type:'bold', label:'House Party: Bold', opener:'Casually Cut In',
+    text:'Find a small group conversation, listen for a beat, add one thing that moves it forward. When someone asks who you are, tell them. You\'ve already earned the introduction.',
+    options:[], cue:'You earn the introduction by being interesting first.',
+    venues:['houseprty','anywhere','bougie'] },
+  { type:'warm', label:'Plus One', opener:'Observation',
+    text:'You\'re in someone else\'s world. "I\'m [Name]\'s guest — she\'s the one who knows everyone here. I\'m just exploring." No pitch required. Curious outsider is more memorable than someone networking hard in a room that isn\'t theirs.',
+    options:[], cue:'Being genuinely curious without an agenda is rare in these rooms.',
+    venues:['houseprty','bougie','festival','anywhere'] },
+
+
+  // -- BOMBSHELL + WILDCARD --
+  { type:'bombshell', label:'Bombshell', opener:'Spread the News',
+    text:'Walk up to the booth during a transition and make a song request. While you\'re there: "That last set was actually perfect." Post-set she\'s off the clock — that\'s the real window.',
+    options:[{ label:'They respond warm', text:'Stay thirty seconds max. If she plays your song and looks at you when it drops, she got the message.' }, { label:'Post-set', text:'They\'re off the clock. Find her in the room.' }], cue:'The booth is their workspace. Brief, warm, intentional.',
+    venues:['dj','southhouse','sapphic','festival'] },
+  { type:'bombshell', label:'Bombshell', opener:'Eye Contact',
+    text:'She keeps finding you in the room with their eyes. Hold it for one full bar of music. Then mouth "thank you" — slow, meant — and turn back to the dance floor.',
+    options:[], cue:'You just ran an entire conversation without moving.',
+    venues:['dj','southhouse','sapphic','festival'] },
+  { type:'bombshell', label:'Bombshell', opener:'Hi + Eye Contact',
+    text:'You end up next to them at a bar, gallery, or watch party. You look at them and say: "You look like you\'re exactly where you\'re supposed to be tonight." Then order your drink.',
+    options:[], cue:'Say it easy. Don\'t explain it. Let her decide what to do with it.',
+    venues:['winebar','gallery','bougie','sapphic','festival','dj','anywhere'] },
+  { type:'bombshell', label:'Bombshell', opener:'Observation',
+    text:'You\'re at a bougie event or gallery. When you end up near each other naturally, say one thing about the room that only someone with taste and a sense of humor would notice. Watch their face.',
+    options:[{ label:'They laugh or finishes the thought', text:'You\'re in. Stay in.' }, { label:'They smile politely and moves on', text:'Graceful exit.' }], cue:'In rooms full of people performing, the person being real stands out immediately.',
+    venues:['bougie','gallery','museum','winebar','sapphic','anywhere'] },
+  { type:'bombshell', label:'Bombshell', opener:'Put in a Request',
+    text:'Make a small ask of the person you\'re interested in before you make your actual move. "Can you hold this for a second?" creates a debt of attention. She\'s now looking at you.',
+    options:[], cue:'The small ask opens a window. What you do with the window is up to you.',
+    venues:['dj','bougie','gallery','sapphic','festival','outdoor','anywhere'] },
+  { type:'bombshell', label:'Bombshell', opener:'Question',
+    text:'After their set, post-panel, after the game, end of class — catch her in the transition. "That was the best thing that happened tonight." One sentence. Then introduce yourself.',
+    options:[], cue:'The transition window is underrated. Guards are down. She\'s real.',
+    venues:['dj','festival','sports','gallery','improv','fitness','anywhere'] },
+  { type:'bombshell', label:'Bombshell', opener:'Compliment',
+    text:'Give a specific compliment and keep walking. "That coat is perfect." No follow-up needed. She will remember you for the rest of the night.',
+    options:[], cue:'A compliment you don\'t need anything back from is the most powerful kind in this room.',
+    venues:['bougie','gallery','museum','winebar','sapphic','anywhere'] },
+  { type:'bombshell', label:'Bombshell', opener:'Wave Over',
+    text:'High-energy room — sports bar, watch party, festival, dance floor. You make eye contact during a big moment. You wave them over. When she gets there: "I needed someone to react with."',
+    options:[], cue:'Only works if you\'ve already had a moment of shared energy. Don\'t cold-wave.',
+    venues:['sports','festival','southhouse','dj','anywhere'] },
+  { type:'bombshell', label:'Bombshell', opener:'Observation',
+    text:'Farmers market, festival, outdoor event — you know something worth knowing. A vendor almost sold out, the best set on the second stage, a piece everyone\'s sleeping on. Give her the information first.',
+    options:[], cue:'You walk in with something useful. That\'s already an opener.',
+    venues:['outdoor','festival','gallery','museum','anywhere'] },
+  { type:'bombshell', label:'Bombshell', opener:'Change It Up',
+    text:'You\'re at a gallery or cultural event. Instead of asking about them: "What\'s the last thing that genuinely surprised you?" Not shocked — surprised.',
+    options:[], cue:'This question is yours. It\'s intellectual and warm and it will sort people fast.',
+    venues:['gallery','museum','writing','art','festival','anywhere'] },
+  { type:'wildcard', label:'Wildcard', opener:'Question',
+    text:'"Are you gay enough for me to buy you a drink?" Say it with a straight face and a half-smile. It\'s a complete sentence. Only for when you already feel it.',
+    options:[{ label:'They laugh and says yes', text:'"Good. What are you having?"' }, { label:'"Depends on the drink"', text:'Best possible answer. You have the next twenty minutes.' }, { label:'She looks confused', text:'Full grace. Move on.' }], cue:'Not a cold opener.',
+    venues:['sapphic','dj','winebar','festival','southhouse','anywhere'] },
+  { type:'wildcard', label:'Wildcard: Masc Moment', opener:'Put in a Request',
+    text:'You\'re at the bar. You\'ve been paying attention. You catch the bartender before she does and add their drink to yours — only if you already know what she\'s having. Slide it down. No explanation. Look at them briefly when it arrives.',
+    options:[], cue:'Do it once. Do it clean. Let it land on its own.',
+    venues:['winebar','dj','southhouse','sapphic','festival','bougie'] },
+  { type:'wildcard', label:'Wildcard: Masc Moment', opener:'Change It Up',
+    text:'You walk over. Slow. Don\'t look away. When you get there: "I don\'t usually do this." Then wait.',
+    options:[], cue:'Only works if it\'s actually true.',
+    venues:['sapphic','dj','southhouse','festival','bougie','gallery'] },
+  { type:'wildcard', label:'Wildcard', opener:'Compliment',
+    text:'Tell her the specific thing that made you notice her from across the room. Not "you\'re beautiful." The actual thing — the way she moved, the way she laughed, the coat, the energy.',
+    options:[], cue:'Specificity is intimacy. Most people never get it.',
+    venues:['anywhere','sapphic','dj','museum','gallery','festival','bougie','winebar'] },
+  { type:'wildcard', label:'Wildcard', opener:'Observation',
+    text:'You\'re in line for something. You make eye contact with the person at the door and just ask: "Any chance?" Easy. No performance. See what happens. If it works, turn to whoever is near you: "They\'re with me."',
+    options:[], cue:'The ask is the move. The result is secondary.',
+    venues:['dj','bougie','sapphic','festival','gallery','anywhere'] },
+  { type:'wildcard', label:'Wildcard: Masc Moment', opener:'Question',
+    text:'You\'ve been talking for a while and it\'s been good. Before it ends: "I\'m going to take you somewhere better than this. Are you in?" Then name the place.',
+    options:[], cue:'Have the place ready before you say it. Specific is the whole move.',
+    venues:['winebar','dj','sapphic','festival','bougie','southhouse','anywhere'] },
+  { type:'wildcard', label:'Wildcard', opener:'Random Kindness',
+    text:'You notice someone dealing with something small — a bag, a door, a coat, a dying phone. You solve it before they ask. Eye contact after, not before. Then introduce yourself like it was nothing.',
+    options:[], cue:'The gesture lands because you didn\'t make it about yourself.',
+    venues:['anywhere','bougie','festival','outdoor','gallery','retreat'] },
+
+
+  // -- EXTRA BOMBSHELL + FRIEND CARDS --
+  { type:'bombshell', label:'Bombshell', opener:'Wave Over',
+    text:'You\'re across the room. You catch her eye, hold it a beat, then do a slow wave and a real smile — not frantic, not a summons. Just: come here. When she arrives, you speak first.',
+    options:[{ label:'They come over', text:'You speak first. Something about the room, the moment, the music. Not "so what do you do."' }, { label:'They smile but doesn\'t move', text:'They\'re interested but shy. You may need to close the distance — but now you know it\'s welcome.' }, { label:'She looks away and doesn\'t look back', text:'That\'s a read. Let it go.' }], cue:'The wave is an invitation, not a command. The smile is what makes her want to accept it.',
+    venues:['dj','southhouse','sapphic','festival','museum','gallery','anywhere'] },
+  { type:'friend', label:'Friend Move', opener:'Observation',
+    text:'You spot someone at a workshop, gallery, or event who seems genuinely engaged — not performing engagement. Make an observation about what they\'re paying attention to, not about them. That\'s the opener. Friendship starts with noticing the same things.',
+    options:[], cue:'You\'re not vetting yet. You\'re just making contact. The vetting happens over time.',
+    venues:['museum','gallery','writing','art','political','leftist','anywhere'] },
+  { type:'friend', label:'Friend Move', opener:'Question',
+    text:'At any recurring space — a class, a club, a workshop — ask someone if they come regularly. If they do: "I\'m trying to make this a thing for myself. What\'s kept you coming back?" That question routes toward values, not small talk.',
+    options:[], cue:'Recurring spaces are where friendships actually form. One good conversation doesn\'t make a friend — showing up again does.',
+    venues:['fitness','dancing','climbing','writing','art','gaming','improv','anywhere'] },
+  { type:'friend', label:'Friend Move: Spot Your People', opener:'Observation',
+    text:'The go-getter is asking real questions at the panel, not performing. The unmasked ND is hyperfocused on one thing in the room. The social dynamo has people returning to their orbit. The host is already making sure people have drinks. Spot the type before you approach.',
+    options:[{ label:'The go-getter', text:'Ask what she\'s working on right now. She\'ll tell you for twenty minutes and ask you back.' }, { label:'The unmasked ND', text:'Find what she\'s lit up about and ask about that specifically. Don\'t redirect.' }, { label:'The social dynamo', text:'Tell her something you noticed about how she moves through the room. She\'ll appreciate being seen, not just surrounded.' }, { label:'The host type', text:'Offer to help with something small. Hosts bond through doing together.' }], cue:'You\'re looking for people who are themselves in public. That\'s the whole filter.',
+    venues:['houseprty','gaming','writing','art','political','dancing','festival','anywhere'] },
+  { type:'friend', label:'Friend Move', opener:'Sprinkle Value',
+    text:'You know something she\'d care about — an event, an opportunity, a resource, a person she should meet. Share it with no agenda. "I thought of you when I saw this" after only a couple of interactions is one of the most friendship-accelerating things you can do.',
+    options:[], cue:'Friends think of each other between interactions. Starting that pattern early signals what kind of friend you\'re going to be.',
+    venues:['anywhere','writing','art','gallery','political','leftist'] },
+  { type:'friend', label:'Friend Move: Routing', opener:'Question',
+    text:'You\'ve met someone interesting and the energy is warm but you\'re not sure if it\'s dating energy or friendship energy. Ask yourself: do I want to know about their life, or do I want to be in it? Do I feel pulled toward them, or comfortable near them?',
+    options:[{ label:'Pulled toward them', text:'That\'s dating energy. Keep the card in your pocket and see how it develops.' }, { label:'Comfortable near them', text:'That\'s friendship energy. Lean into it consciously. Don\'t let it drift into ambiguous territory.' }, { label:'Both', text:'Name it to yourself. You can feel both and still choose where to put the energy.' }], cue:'The routing decision is yours to make consciously. Default drift creates confusion for both of you.',
+    venues:['anywhere','sapphic','museum','gallery','writing','gaming'] },
+  { type:'friend', label:'Friend Move: Vetting', opener:'Question',
+    text:'Early friendship vetting isn\'t an interview — it\'s paying attention. Watch: Does she ask about you or just talk about themself? Does she follow up on things you mentioned? Does she make plans or just agree when you make them? Is she on time?',
+    options:[{ label:'She asks about you', text:'Good sign. She\'s curious, not just waiting to be heard.' }, { label:'She follows up on details', text:'She was listening. That\'s rare and worth noting.' }, { label:'She initiates plans sometimes', text:'Reciprocity is present. This one\'s worth investing in.' }, { label:'She\'s consistently late or cancels', text:'Read it early. It won\'t change.' }], cue:'You\'re not looking for perfect. You\'re looking for consistent and genuinely interested.',
+    venues:['anywhere'] },
+  { type:'friend', label:'Friend Move: Deepening', opener:'Question',
+    text:'Most friendships stall at surface level because neither person asks the next question. After a few comfortable hangs, try: "What\'s something you\'re genuinely proud of right now that you don\'t talk about much?" That question goes somewhere.',
+    options:[], cue:'You like deep conversations. Lead with one. The people who respond in kind are your people.',
+    venues:['anywhere','writing','retreat','leftist','political'] },
+  { type:'friend', label:'Friend Move: The Invitation', opener:'Put in a Request',
+    text:'You\'ve had a good conversation at an event. Before you part: "I\'m going to [specific thing] next week — you should come." Not "we should hang sometime." A specific thing, a specific time. The invitation is the friendship bid.',
+    options:[{ label:'They say yes immediately', text:'Follow through. Send the details within 24 hours.' }, { label:'They\'re interested but non-committal', text:'Follow up once with specifics. If she still deflects, let it be.' }, { label:'She counters with them own plan', text:'Even better. She\'s bidding back.' }], cue:'The friendship bid is specific and low-pressure. It gives her an easy yes without requiring a whole commitment.',
+    venues:['anywhere','museum','gallery','gaming','writing','art','outdoor'] },
+  { type:'friend', label:'Friend Move: Recurring Hang', opener:'Question',
+    text:'"I do [thing] on [day] most weeks — want to join sometime?" A standing invitation is more powerful than a one-time plan because it removes the friction of scheduling every single time.',
+    options:[{ label:'Weekly cheers spot', text:'"I\'m usually at [place] on [day] around [time] — come find me sometime."' }, { label:'A class or hobby', text:'"I take [class] on [day] — it\'s really good. Come once and see if you like it."' }, { label:'A creative practice', text:'"I do a writing/photography thing sometimes with a small group — want to join next time?"' }], cue:'Standing invitations build friendship in the background without requiring effort every week.',
+    venues:['anywhere','fitness','writing','gaming','art','outdoor','climbing'] },
+  { type:'friend', label:'Friend Move: Be the Connector', opener:'Casually Cut In',
+    text:'You meet someone interesting and you immediately think of someone else she should know. Make the introduction — specifically, with a reason. "You two should meet — [specific reason]." Being the person who connects people builds your own network at the same time.',
+    options:[], cue:'Connectors are never lonely. And the people you connect tend to remember you made it happen.',
+    venues:['houseprty','festival','gaming','writing','gallery','museum','anywhere'] },
+  { type:'friend', label:'Friend Move: Reciprocity Check', opener:'Observation',
+    text:'Six weeks in, pause and ask yourself: have I reached out more than she has? Have I initiated every plan? Does she ask about me or mostly talk? You\'re not keeping score — you\'re checking the temperature.',
+    options:[{ label:'It\'s roughly even', text:'Good. This one\'s building.' }, { label:'You\'re doing most of the work', text:'Try pulling back slightly. If they reach out, she noticed. If she doesn\'t, you have your answer.' }, { label:'She\'s doing more than you', text:'Check in with yourself. Are you showing up the way you want someone to show up for you?' }], cue:'You don\'t want to overgive in friendships any more than in dating. The check-in protects your energy.',
+    venues:['anywhere'] },
+  { type:'friend', label:'Friend Move: The Host Friend', opener:'Spread the News',
+    text:'If you want a friend who hosts, be around hosting. Show up to things people organized, bring something, say what was good about it. People who host notice people who appreciate it — and they invite them back.',
+    options:[], cue:'The host friend you want already exists. You just haven\'t met her yet because you haven\'t been in the spaces she\'s hosting.',
+    venues:['houseprty','gaming','writing','art','leftist','anywhere'] },
+  { type:'friend', label:'Friend Move: Community', opener:'Casually Cut In',
+    text:'Community is different from a friend group. It\'s the recurring space where you know people by name, they know yours, and you\'re happy to see each other without scheduling. Find one recurring space and show up consistently for 60 days. See who emerges.',
+    options:[], cue:'Community is built through repetition, not effort. Show up. Be warm. Let time do the work.',
+    venues:['fitness','dancing','writing','gaming','climbing','leftist','political','anywhere'] },
+  { type:'friend', label:'Friend Move: Values Vibe Check', opener:'Question',
+    text:'You don\'t need to quiz people but you do need to listen. Go-getters talk about what they\'re building. Nonjudgmental ones don\'t shade third parties in the first conversation. ND-friendly ones lean into your special interest instead of redirecting it.',
+    options:[{ label:'Ambition signal', text:'She asked about your project and actually listened to the answer.' }, { label:'Nonjudgmental signal', text:'She didn\'t make a single remark about someone else\'s choices in the conversation.' }, { label:'Deep conversation signal', text:'She asked a follow-up question that required her to have been listening.' }, { label:'Healthy competition signal', text:'She was genuinely happy about your win, not performatively.' }], cue:'You\'re not looking for perfect. You\'re looking for people whose baseline already looks like what you want.',
+    venues:['anywhere','writing','art','political','gaming','gallery'] },
+
+
+  // -- DATE TRACK + NAVIGATION CARDS --
+  { type:'progression', label:'Date Track', opener:'Question',
+    text:'You\'ve been talking for a while and the energy is good. Before the night ends, name what you\'re open to — give them a couple of options. "I\'m thinking drinks, pastries somewhere, or a smoothie — nothing complicated." You\'ve shown interest. She can do the planning.',
+    options:[], cue:'You\'ve made your interest known. Her response tells you everything. If they\'re interested she\'ll handle the rest.',
+    venues:['museum','southhouse','gallery','sapphic','anywhere'] },
+  { type:'progression', label:'Date Track: Phone Call', opener:'Question',
+    text:'Before any date: a call first. Not to build chemistry from scratch — to confirm she\'s worth traveling for and let the conversation open up somewhere low-pressure. If the call is long and good, the date plans itself. If it\'s flat, you saved yourself the trip.',
+    options:[{ label:'The call is good', text:'It will naturally move toward meeting in person. Let her suggest something or you name a couple of options.' }, { label:'The call is fine but not electric', text:'Still worth a low-key first meet — cafe, bakery, ice cream. Easy exit, easy yes.' }, { label:'The call is flat', text:'That\'s information. You don\'t have to force a date.' }], cue:'The call is the first filter. It\'s also where logistics get sorted — especially if you\'re traveling.',
+    venues:['anywhere'] },
+  { type:'progression', label:'Date Track: First Date', opener:'Observation',
+    text:'Low-frills on purpose — cafe, bakery, ice cream, smoothie spot. Easy to leave, easy to extend. You\'re there to find out if the in-person energy matches what you felt before. That\'s the only job.',
+    options:[{ label:'She picks somewhere close to you', text:'Good. She\'s thinking about your time.' }, { label:'She picks the middle', text:'Fair. She\'s thinking about both of you.' }, { label:'She expects you to travel far with no plan', text:'Note it. That\'s the energy she\'ll bring to everything.' }], cue:'She handles logistics, especially if you\'re traveling over an hour. If there was no call, she comes to you.',
+    venues:['anywhere'] },
+  { type:'progression', label:'Date Track: Follow-Through', opener:'Spread the News',
+    text:'Within 48 hours of the exchange. Not "hey!" — something specific that references what you actually talked about. One line that makes it clear you were present.',
+    options:[], cue:'Most people skip this step or wait too long. You won\'t.',
+    venues:['anywhere'] },
+  { type:'friend', label:'Navigating: Not Your Field', opener:'Question',
+    text:'You\'re at an event that skews finance, tech, or a field outside yours. When someone asks what you do, answer briefly and redirect: "What about you — are you in this field or did you just find your way here?" The redirect is the move.',
+    options:[{ label:'They\'re job-hunting', text:'They\'re in acquisition mode. Be warm, don\'t overgive, move on.' }, { label:'They\'re established', text:'More likely to be genuinely curious about someone outside their field. Your work becomes interesting.' }, { label:'They ask what you can do for them', text:'"I\'m still figuring out how I fit into this world" closes the transactional door gracefully.' }], cue:'Your value at these events is social and human. Lead with that.',
+    venues:['bougie','gaming','houseprty','festival','anywhere'] },
+  { type:'friend', label:'Navigating: Plus One', opener:'Observation',
+    text:'You\'re operating as someone\'s plus one in their world. "I\'m [Name]\'s guest — she\'s the one who knows everyone here. I\'m just exploring." No pitch required. Curious outsider is more memorable than someone networking hard in a room that isn\'t theirs.',
+    options:[], cue:'Being genuinely curious without an agenda is rare in professional rooms. It\'s your edge.',
+    venues:['bougie','houseprty','festival','anywhere'] },
+  { type:'friend', label:'Navigating: Curiosity Play', opener:'Sprinkle Value',
+    text:'At finance or tech events where people are job-hunting or deal-seeking: the person who isn\'t visibly wanting anything stands out. Express genuine curiosity about the field — not career interest, just intellectual curiosity. "I\'ve been reading about this and I keep having questions."',
+    options:[{ label:'They light up explaining', text:'Real connection. People love being asked to teach.' }, { label:'They pivot to what you can do for them', text:'Let it land flat. You don\'t have to perform interest you don\'t feel.' }], cue:'Curiosity without agenda is genuinely rare. People light up when asked to explain something they love.',
+    venues:['bougie','festival','houseprty','anywhere'] },
+  { type:'friend', label:'Navigating: Job-Hunt Energy', opener:'Observation',
+    text:'When a room is full of people in job-hunt mode, pivot to personal quickly. Ask about their life outside the search. "What are you doing with the free time while you\'re figuring this out?" Most people are relieved to be asked something that isn\'t about their resume.',
+    options:[], cue:'You can\'t network your way into a real connection with someone running an acquisition play. But you can find the person underneath the pitch.',
+    venues:['bougie','houseprty','anywhere'] },
+
+
+  // -- NETWORKING CARDS --
+  { type:'networking', label:'Networking', opener:'Observation',
+    text:'Working a panel or conference: don\'t try to meet everyone. Find two or three people who seem genuinely engaged — asking real questions, paying attention to the room — and start there. Quality over coverage.',
+    options:[], cue:'The person who has one real conversation is more memorable than the one who collected twenty cards.',
+    venues:['bougie','museum','gallery','political','leftist','anywhere'] },
+  { type:'networking', label:'Networking', opener:'Question',
+    text:'The opener that actually works: "What brought you to this one specifically?" Not "what do you do" — what brought them here. People who show up to niche events have a real answer and they appreciate being asked for it.',
+    options:[], cue:'This question separates the people who are present from the people who are just attending.',
+    venues:['bougie','museum','gallery','political','leftist','writing','anywhere'] },
+  { type:'networking', label:'Networking', opener:'Sprinkle Value',
+    text:'Before you ask for anything — a connection, an intro, advice — give something first. A resource, a recommendation, a piece of information they\'d actually care about. Lead with useful, not with need.',
+    options:[], cue:'The ask lands completely differently when it follows genuine generosity.',
+    venues:['bougie','museum','gallery','festival','anywhere'] },
+  { type:'networking', label:'Networking: The Ask', opener:'Question',
+    text:'Making an ask without it feeling like an ask: frame it around their expertise, not your need. "I\'ve been thinking about [thing you know about] — would you be open to a 20-minute call sometime?" Short, specific, easy to say yes to.',
+    options:[{ label:'They say yes immediately', text:'Send the calendar invite within 24 hours. Don\'t let it drift.' }, { label:'They say maybe or suggest email', text:'Send a short email that day. One paragraph. Easy to respond to.' }, { label:'They pivot away', text:'Don\'t push. A warm connection that isn\'t ready yet is still a connection.' }], cue:'An ask that respects their time and acknowledges their knowledge is easy to say yes to.',
+    venues:['bougie','museum','political','anywhere'] },
+  { type:'networking', label:'Networking: Follow-Up', opener:'Spread the News',
+    text:'Within 48 hours of meeting someone worth keeping: send something specific. Not "great to meet you" — reference something you actually talked about, or send something relevant you thought of after. One sentence is enough.',
+    options:[], cue:'Most people skip the follow-up or send a generic note. The specific one is what they remember.',
+    venues:['anywhere'] },
+  { type:'networking', label:'Networking: Staying in Touch', opener:'Question',
+    text:'You don\'t have to schedule a coffee every time. Staying in touch can be as simple as sharing an article they\'d care about, commenting on something they posted, or mentioning them when you meet someone they should know. Low-friction, high-presence.',
+    options:[], cue:'Consistency over time is what turns a contact into a real connection.',
+    venues:['anywhere'] },
+  { type:'networking', label:'Networking: Weak Ties', opener:'Observation',
+    text:'Not every connection needs to be deep. Weak ties — people you know loosely and warmly — are often how opportunities actually move. A friendly acquaintance who thinks of you when something comes up is more valuable than a hundred people who barely know your name.',
+    options:[{ label:'Worth keeping', text:'Mutual respect, ease of interaction, occasional genuine check-in. Low maintenance, good energy.' }, { label:'Worth investing in', text:'They\'re doing interesting things, they remember you, there\'s genuine mutual curiosity. Make the ask.' }, { label:'Let it fade', text:'Purely transactional, energy draining, or one-sided. Not every connection needs to be maintained.' }], cue:'Tend your weak ties with warmth and occasional contact. They compound quietly.',
+    venues:['anywhere'] },
+  { type:'networking', label:'Networking: Being Memorable', opener:'Compliment',
+    text:'The most memorable person in a professional room isn\'t the most impressive — it\'s the one who made people feel genuinely seen. Ask a real question and actually listen. Say something specific about what you noticed. Leave people feeling good about themselves.',
+    options:[], cue:'You\'re good at this. It\'s not a networking strategy — it\'s just who you are. Let it work for you.',
+    venues:['bougie','museum','gallery','political','festival','anywhere'] },
+  { type:'networking', label:'Networking: Rooms to Own', opener:'Observation',
+    text:'The rooms where you have the most natural power: Black arts and film spaces, queer cultural events, creative industry gatherings, junior board events, spaces where your intersecting identities are assets rather than footnotes. Know which rooms are yours.',
+    options:[], cue:'You don\'t have to network hard in rooms that are already yours. Just show up fully.',
+    venues:['museum','gallery','political','leftist','dancing','festival','anywhere'] },
+  { type:'networking', label:'Networking: Career Transition', opener:'Question',
+    text:'Exploring a new field at an event: don\'t fake familiarity you don\'t have. Express genuine curiosity instead. "I\'m not in this world yet but I keep finding my way into these rooms — what would you want someone like me to understand about it?" That question is both honest and smart.',
+    options:[], cue:'Intellectual curiosity is more attractive than a rehearsed pitch in almost every room.',
+    venues:['bougie','festival','houseprty','anywhere'] },
+
+
+  // -- EXTRA CHESS CARDS --
+  { type:'warm', label:'Chess: Opening', opener:'Question',
+    text:'At a chess meetup or cafe, ask someone what opening they like to play. People who play chess have opinions about openings the way people have opinions about music. The answer tells you a lot about how they think.',
+    options:[], cue:'Aggressive openings, positional play, gambits — it\'s all personality. Ask and listen.',
+    venues:['chess','gaming','anywhere'] },
+  { type:'mini', label:'Chess: Learning', opener:'Question',
+    text:'"I\'m trying to understand why I keep losing my queen in the middle game — do you see it?" Show them a position. People who love chess love diagnosing other people\'s chess. You\'ve just handed them a gift.',
+    options:[], cue:'You\'re not performing incompetence — you\'re being genuinely curious. That\'s attractive.',
+    venues:['chess','gaming','anywhere'] },
+  { type:'bold', label:'Chess: Bold', opener:'Observation',
+    text:'You\'ve been watching them play. When the game ends: "That exchange sacrifice in move 14 — was that planned or did you just feel it?" This question only makes sense if you were actually watching. It proves you were.',
+    options:[], cue:'Being observed with intelligence is intimate. Most people only watch to wait for their turn.',
+    venues:['chess','gaming','anywhere'] },
+  { type:'mini', label:'Chess: Invite', opener:'Put in a Request',
+    text:'"Teach me one thing that would actually make me better." One thing. Not a lesson — one thing. The constraint makes it a gift rather than a tutorial.',
+    options:[], cue:'The best teachers light up when asked for the one essential thing. Watch what they choose.',
+    venues:['chess','gaming','scary','anywhere'] },
+  { type:'bold', label:'Chess: Match', opener:'Question',
+    text:'"Play me. I\'ll lose but I want to see how you think." Offering to lose gracefully is confidence, not weakness. It\'s also the fastest way to learn about someone — how they play when they know they\'ll win.',
+    options:[{ label:'They play generously', text:'They slow down, explain, let you catch up. That\'s someone who leads with teaching.' }, { label:'They play to win cleanly', text:'Focused, clean, no showboating. Respect the game, respect the person.' }, { label:'They play with commentary', text:'They\'re the kind of person who thinks out loud. Note that for later.' }], cue:'Do they play mercifully or ruthlessly? Do they explain their moves or stay silent? Both are interesting.',
+    venues:['chess','gaming','anywhere'] },
+  { type:'friend', label:'Chess: After the Game', opener:'Observation',
+    text:'After a match — win or loss — ask what they were thinking at the moment everything changed. Not "good game" — the specific moment. "When did you know?" People remember the turning points. That question leads somewhere real.',
+    options:[], cue:'The post-game conversation is where people actually connect over chess. The game is just the opening.',
+    venues:['chess','gaming','anywhere'] },
+
+
+  // -- FAILING FORWARD CARDS --
+  { type:'bombshell', label:'Bombshell: Fail Forward', opener:'Hi + Eye Contact',
+    text:'Walk up to the person you\'ve been thinking about approaching for twenty minutes. Say hi. See what happens. If it lands, great. If it doesn\'t, that\'s a point on the board. Either outcome is a win.',
+    options:[], cue:'The twenty-minute-think-about-it approach is already costing you energy. The actual approach takes ten seconds. Do the math.',
+    venues:['museum','southhouse','sapphic','dj','gallery','bougie','anywhere'] },
+  { type:'bombshell', label:'Bombshell: Fail Forward', opener:'Question',
+    text:'Ask for the number, the card, or the email directly. Not "we should hang sometime" — "can I have your number?" or "let me give you my card." If they say no or hesitate, you just got a point. Smile, say "no worries," and move on like you meant to all along.',
+    options:[{ label:'They say yes', text:'Follow through within 48 hours. Don\'t let it get cold.' }, { label:'They hesitate or say no', text:'"No worries at all." Warm smile. Move on. That\'s a point. Log it.' }], cue:'The direct ask is the whole move. The no is just the other possible outcome, not a catastrophe.',
+    venues:['anywhere','sapphic','dj','southhouse','museum','gallery','winebar'] },
+  { type:'wildcard', label:'Wildcard: Graceful Exit', opener:'Change It Up',
+    text:'The conversation has hit a wall — you can feel it. Instead of letting it die slowly, close it clean: "This was actually really nice — I\'m going to go find my people but I\'m glad I stopped over." Warm, final, no awkwardness. You just modeled what a clean exit looks like.',
+    options:[{ label:'They try to continue', text:'"I\'ll find you later" if you mean it. If you don\'t, just smile and go. You don\'t owe a longer conversation.' }, { label:'They seem relieved', text:'They were waiting for someone to end it too. You did them a favor.' }], cue:'A graceful exit is a skill. Every awkward conversation you close cleanly is a rep. Log it as a win.',
+    venues:['anywhere','museum','bougie','gallery','sapphic','dj','southhouse'] },
+  { type:'wildcard', label:'Wildcard: The Polite No', opener:'Hi + Eye Contact',
+    text:'You made an approach and it\'s clear they\'re not interested — energy pulled back, short answers, looking away. The move: "You\'re good, no worries — enjoy your night." Smile, mean it, leave. That\'s grace under fire and it\'s one of the most attractive things a person can do.',
+    options:[], cue:'You just demonstrated that you can handle a no with dignity. That\'s the whole character.',
+    venues:['anywhere','sapphic','dj','southhouse','museum','bougie'] },
+  { type:'wildcard', label:'Wildcard: Fail Forward', opener:'Observation',
+    text:'The goal tonight is not to find someone — it\'s to collect five failures. A rejection, an awkward exit, a conversation that went nowhere. Each one is proof you were actually in the room. Hit five and you\'ve won the night regardless of anything else.',
+    options:[], cue:'Track them in the Failing Forward counter. Reward yourself when you hit the goal.',
+    venues:['anywhere','museum','southhouse','dj','sapphic','festival','gaming','dancing'] },
+  { type:'bombshell', label:'Bombshell: Fail Forward', opener:'Casually Cut In',
+    text:'Join a conversation that\'s already happening — don\'t wait for an invitation. Contribute one thing. If it lands, stay. If people don\'t turn toward you, exit gracefully: "Sorry to interrupt — enjoy your night." Either outcome is fine. You practiced the cut-in.',
+    options:[], cue:'The cut-in only feels scary before you do it. After the second or third time it\'s just a move.',
+    venues:['houseprty','bougie','museum','sapphic','gaming','anywhere'] },
+
+
+  // -- PRIDE CARDS --
+  { type:'warm', label:'Pride: Block Party', opener:'Observation',
+    text:'Block parties are permission-rich spaces where everyone is already in a good mood and the social contract is loose. The opener writes itself — the music, the crowd, the energy. Say something true about the moment you\'re both in.',
+    options:[], cue:'You don\'t need a reason to talk to someone at a block party. You\'re already in it together.',
+    venues:['pride','southhouse','festival','anywhere'] },
+  { type:'mini', label:'Pride: Block Party', opener:'Question',
+    text:'Ask someone which stage or DJ they came for. If they know exactly who, they\'re your people. If they say "all of it," they\'re having fun and open to anything — including talking to you.',
+    options:[], cue:'Food lines, drink lines, and the space between sets are the best windows. Everyone is between moments.',
+    venues:['pride','festival','anywhere'] },
+  { type:'bold', label:'Pride: Block Party', opener:'Wave Over',
+    text:'You\'re dancing near someone interesting. Make eye contact, smile, wave them over into your orbit. No words needed yet. The dance floor is its own language — let it do the opening work.',
+    options:[], cue:'Block party dancing is communal. Pulling someone in is an invitation, not a move.',
+    venues:['pride','southhouse','dj','festival'] },
+  { type:'warm', label:'Pride: Parade', opener:'Observation',
+    text:'Parades give you something to react to together in real time. When a float goes by or something amazing happens — look at whoever is near you and react. That shared reaction is an instant bond without any effort.',
+    options:[], cue:'You don\'t have to engineer the opener at a parade. The parade engineers it for you.',
+    venues:['pride','festival','anywhere'] },
+  { type:'mini', label:'Pride: Parade', opener:'Question',
+    text:'"Is this your first time here or are you a regular?" At Pride parades this opens everything — local vs visiting, first time vs annual tradition. Both answers lead somewhere real.',
+    options:[{ label:'They\'re visiting', text:'Ask where they came from and what brought them here specifically. That\'s a real conversation.' }, { label:'They\'re a regular', text:'What\'s different about this year? They\'ll have an opinion.' }], cue:'People travel for Pride. Someone from out of town has a whole story. Ask about it.',
+    venues:['pride','anywhere'] },
+  { type:'approach', label:'Pride: Parade', opener:'Hi + Eye Contact',
+    text:'Pride parades are one of the few places where making eye contact and smiling at a stranger carries an explicit shared understanding. Use it. Eye contact, slow smile, let them come to you if they want. The crowd does the rest.',
+    options:[], cue:'The energy of a parade makes approach feel natural. Lean into that.',
+    venues:['pride','festival','sapphic'] },
+  { type:'warm', label:'Pride: Rave', opener:'Eye Contact',
+    text:'Raves run on energy, not words. Before you say anything to anyone, spend the first 20 minutes just being in your body — dance, feel the music, get present. The right connection will find you when you\'re actually in the room.',
+    options:[], cue:'You can\'t manufacture rave connection. You can only be available for it.',
+    venues:['pride','dj','sapphic','festival'] },
+  { type:'mini', label:'Pride: Rave', opener:'Change It Up',
+    text:'The move at a rave isn\'t an opener — it\'s proximity and shared rhythm. Dance near someone interesting. If the energy matches, let it develop. If they lean in or make eye contact, that\'s the green light.',
+    options:[], cue:'Words are secondary at a rave. Your body language, your energy, your presence — that\'s the whole opener.',
+    venues:['pride','dj','sapphic'] },
+  { type:'bold', label:'Pride: Rave', opener:'Hi + Eye Contact',
+    text:'During a quieter transition or a moment off the floor: full eye contact, close enough to be heard, say hi and your name. Clean. Direct. The rave context does everything else.',
+    options:[], cue:'The brief quiet between songs is the window. Use it before the next drop.',
+    venues:['pride','dj','sapphic','festival'] },
+  { type:'bombshell', label:'Bombshell: Rave', opener:'Eye Contact',
+    text:'You\'ve been making eye contact on the dance floor for the last three songs. The next time it happens, don\'t look away. Hold it through a full verse. Then smile slowly and keep dancing. You\'ve said everything.',
+    options:[], cue:'Extended eye contact on a dance floor is the most efficient conversation you\'ll ever have.',
+    venues:['pride','dj','sapphic','festival'] },
+  { type:'warm', label:'Pride: Classy Event', opener:'Compliment',
+    text:'At a ticketed Pride gala, rooftop event, or section party, people dressed intentionally. Give a specific compliment that shows you looked — not "you look great" but the detail. The earring, the silhouette, the shoe choice.',
+    options:[], cue:'These rooms reward taste and attention. Noticing something specific signals you belong here.',
+    venues:['pride','bougie','gallery','winebar'] },
+  { type:'mini', label:'Pride: Classy Event', opener:'Observation',
+    text:'The 30+ Pride crowd is done performing. They\'re here to actually enjoy themselves. The opener that works: something real and slightly dry about the room or the event. If they get it, you\'ve found someone.',
+    options:[{ label:'They get it', text:'Stay. This one\'s interesting.' }, { label:'They don\'t', text:'Graceful exit. Not everyone\'s frequency matches yours.' }], cue:'This crowd has seen every Pride opener. Be the one who doesn\'t use one.',
+    venues:['pride','bougie','sapphic','winebar'] },
+  { type:'bold', label:'Pride: Classy Event', opener:'Question',
+    text:'"How many of these have you been to?" At a classy Pride event this question opens nostalgia, community history, and real conversation about what Pride means to someone past the party years.',
+    options:[], cue:'Pride veterans have stories. This question invites them.',
+    venues:['pride','bougie','sapphic','winebar','museum'] },
+  { type:'mini', label:'Pride: Section', opener:'Observation',
+    text:'In a section or VIP area at Pride, everyone paid to be there and knows it. The shared investment creates an instant social ease. "Did you get here early or was it already like this?" is all you need.',
+    options:[], cue:'Section energy is celebratory. Match it. You\'re all here to have a good time.',
+    venues:['pride','bougie','dj','sapphic'] },
+  { type:'bold', label:'Pride: Section', opener:'Put in a Request',
+    text:'You\'ve been eyeing someone in the section. When you end up near the bar or rail at the same time: offer to get their drink or hand them something. Simple, natural, no production. Let the conversation open from there.',
+    options:[], cue:'The section bar is the great equalizer. Everyone ends up there.',
+    venues:['pride','bougie','dj','winebar'] },
+  { type:'friend', label:'Pride: Community', opener:'Casually Cut In',
+    text:'Pride is one of the few spaces where your full identity is the default, not the context. Use that. Be more yourself here than anywhere else. The people who respond to your fullest self are the ones worth keeping.',
+    options:[], cue:'You don\'t have to manage yourself at Pride. Let that be a relief and let it show.',
+    venues:['pride','sapphic','festival','dancing','anywhere'] },
+  { type:'networking', label:'Pride: Networking', opener:'Observation',
+    text:'Pride events — especially the classy 30+ ones — are full of Black and queer creative professionals, founders, and cultural workers. The professional conversation here doesn\'t feel like networking because the shared identity does the warm-up work. Be curious about what people are building.',
+    options:[], cue:'You\'ll meet more aligned creative collaborators at a Pride gala than at most industry events. The overlap is real.',
+    venues:['pride','bougie','sapphic','gallery','museum'] },
+  { type:'wildcard', label:'Wildcard: Pride', opener:'Question',
+    text:'You\'ve been talking to someone for ten minutes at a Pride event and the energy is clearly there. "Are you here with someone or are you free to wander?" Clean. Implies you\'d like them to wander with you.',
+    options:[], cue:'Pride gives you context and permission that most venues don\'t. Use it.',
+    venues:['pride','sapphic','dj','bougie','festival'] },
+  { type:'bombshell', label:'Bombshell: Pride', opener:'Hi + Eye Contact',
+    text:'It\'s Pride. Walk up. Say hi. Make eye contact like you mean it. You need zero other reason. The whole event is the reason.',
+    options:[], cue:'There is no lower-stakes approach environment than Pride. The worst outcome is a warm conversation that goes nowhere.',
+    venues:['pride','sapphic','dj','festival','bougie','dancing'] },
+
+];
+
+let levelFilter = 'all';
+let venueFilter = 'all';
+
+function setFilter(type, val, el) {
+  if (type === 'level') {
+    levelFilter = val;
+    document.querySelectorAll('#levelTabs .tab').forEach(t => t.classList.remove('active'));
+  } else {
+    venueFilter = val;
+    document.querySelectorAll('#venueTabs .tab').forEach(t => t.classList.remove('active'));
+  }
+  el.classList.add('active');
+  renderCards();
+
+// -- FAILURE TRACKER --
+const FAIL_GOAL = 5;
+const WARMUP_GOAL = 10;
+let warmups = 0;
+const attempt_rewards = [
+  "A graceful no is still you showing up. That counts.",
+  "The clean exit is a skill. You just practiced it.",
+  "You took the shot. Most people don't.",
+  "One more attempt on the board.",
+  "Every no is a calibration. You learned something.",
+  "Michelle Obama walked out of that too. You're fine."
+];
+const win_rewards = [
+  "That's the whole point right there.",
+  "Something real just happened.",
+  "This is what you came for.",
+  "That one counts for two."
+];
+const milestones = {
+  3: "Three attempts. You're warm now. The next one is easier.",
+  5: "Five. You hit the goal. Whatever else happens tonight is a bonus.",
+  7: "Seven. You are in it.",
+  10: "Ten. This is a story you'll tell."
+};
+let fails = [];
+let wins = [];
+
+function addWarmup() {
+  warmups++;
+  const pct = Math.min((warmups / WARMUP_GOAL) * 100, 100);
+  document.getElementById('warmupBar').style.width = pct + '%';
+  const item = document.createElement('span');
+  item.className = 'fail-log-item';
+  item.textContent = '👁 ' + warmups;
+  document.getElementById('warmupLog').innerHTML = '';
+  document.getElementById('warmupLog').appendChild(item);
+  if (warmups >= WARMUP_GOAL) {
+    showReward("Ten. You're warmed up. The floor is yours.");
+  } else {
+    showReward((WARMUP_GOAL - warmups) + " more to warm-up goal.");
+  }
+}
+
+function addFail(type) {
+  fails.push(type);
+  const n = fails.length;
+  const pct = Math.min((n / FAIL_GOAL) * 100, 100);
+  document.getElementById('failBar').style.width = pct + '%';
+  const labels = { graceful_no: 'Gave a graceful no', exit: 'Exited at discomfort', shot: 'Took the shot', smile: 'Smiled at stranger' };
+  const item = document.createElement('span');
+  item.className = 'fail-log-item';
+  item.textContent = labels[type] || type;
+  document.getElementById('failLog').appendChild(item);
+  showReward(milestones[n] || attempt_rewards[Math.floor(Math.random() * attempt_rewards.length)]);
+}
+
+function addWin(type) {
+  wins.push(type);
+  const n = wins.length;
+  const pct = Math.min((n / 5) * 100, 100);
+  document.getElementById('winBar').style.width = pct + '%';
+  const labels = { info: 'Exchanged info', convo: 'Great convo', compliment: 'Gave a compliment', intro: 'Introduced myself', card: 'Coochie card out' };
+  const item = document.createElement('span');
+  item.className = 'win-log-item';
+  item.textContent = labels[type] || type;
+  document.getElementById('winLog').appendChild(item);
+  showReward(win_rewards[Math.floor(Math.random() * win_rewards.length)]);
+}
+
+function showReward(text) {
+  const el = document.getElementById('failReward');
+  document.getElementById('failRewardText').textContent = text;
+  el.style.display = '';
+  clearTimeout(el._timer);
+  el._timer = setTimeout(() => { el.style.display = 'none'; }, 4000);
+}
+
+function resetFails() {
+  fails = []; wins = []; warmups = 0;
+  document.getElementById('failBar').style.width = '0%';
+  document.getElementById('winBar').style.width = '0%';
+  document.getElementById('warmupBar').style.width = '0%';
+  document.getElementById('failLog').innerHTML = '';
+  document.getElementById('winLog').innerHTML = '';
+  document.getElementById('warmupLog').innerHTML = '';
+  document.getElementById('failReward').style.display = 'none';
+}
+
+}
+
+function getFiltered() {
+  return cards.filter(c => {
+    const levelOk = levelFilter === 'all' || c.type === levelFilter;
+    const venueOk = venueFilter === 'all' || c.venues.includes(venueFilter);
+    return levelOk && venueOk;
+  });
+}
+
+function renderCards() {
+  const grid = document.getElementById('cardGrid');
+  const empty = document.getElementById('emptyState');
+  const countLabel = document.getElementById('countLabel');
+  grid.innerHTML = '';
+
+  const filtered = getFiltered();
+
+  if (filtered.length === 0) {
+    empty.classList.add('show');
+    countLabel.textContent = '';
+    return;
+  }
+
+  empty.classList.remove('show');
+  countLabel.textContent = `${filtered.length} card${filtered.length !== 1 ? 's' : ''}`;
+
+  filtered.forEach((card, i) => {
+    const el = document.createElement('div');
+    el.className = `card ${card.type} show`;
+    el.style.animationDelay = `${Math.min(i * 0.035, 0.6)}s`;
+
+    const venueMap = { museum:'museum events', southhouse:'south house', church:'church', anywhere:'anywhere', scary:'scary setting', dj:'dj / nightlife', fitness:'fitness class', bookstore:'bookstore', winebar:'wine bar', bougie:'bougie iykyk', sports:'sports / watch party', festival:'festival / live music', gallery:'gallery opening', sapphic:'sapphic nightlife', outdoor:'outdoor / market', improv:'improv / class', retreat:'retreat', political:'political event', dancing:'social dancing', climbing:'rock climbing', gaming:'game night', writing:'writing workshop', art:'art social', leftist:'workshop / training', houseprty:'house party', chess:'chess / strategy', pride:'pride' };
+    const venueHTML = card.venues.map(v => `<span class="venue-tag ${v}">${venueMap[v] || v}</span>`).join('');
+
+    let optionsHTML = '';
+    if (card.options && card.options.length) {
+      optionsHTML = `<div class="options-block">
+        <p class="options-label">How to play it</p>
+        ${card.options.map(o => `<div class="option-item"><div class="option-dot"></div><p class="option-text"><strong>${o.label}:</strong> ${o.text}</p></div>`).join('')}
+      </div>`;
+    }
+
+    el.innerHTML = `
+      <div class="card-header">
+        <span class="card-type">${card.label}</span>
+        <span class="card-num">${String(i+1).padStart(2,'0')}</span>
+      </div>
+      <span class="opener-badge">opener: ${card.opener}</span>
+      <p class="card-text">${card.text}</p>
+      ${optionsHTML}
+      <div class="social-cue">
+        <p class="social-cue-label">The read</p>
+        <p class="social-cue-text">${card.cue}</p>
+      </div>
+      <div class="card-footer">${venueHTML}</div>
+    `;
+    grid.appendChild(el);
+  });
+}
+
+function showFeatured(card) {
+  const feat = document.getElementById('featured');
+  document.getElementById('featType').textContent = card.label + ' — ' + card.opener;
+  document.getElementById('featText').textContent = card.text;
+  document.getElementById('featCue').textContent = card.cue;
+  const venueMap = { museum:'museum events', southhouse:'south house', church:'church', anywhere:'anywhere', scary:'scary setting', dj:'dj / nightlife', fitness:'fitness class', bookstore:'bookstore', winebar:'wine bar', bougie:'bougie iykyk', sports:'sports / watch party', festival:'festival / live music', gallery:'gallery opening', sapphic:'sapphic nightlife', outdoor:'outdoor / market', improv:'improv / class', retreat:'retreat', political:'political event', dancing:'social dancing', climbing:'rock climbing', gaming:'game night', writing:'writing workshop', art:'art social', leftist:'workshop / training', houseprty:'house party', chess:'chess / strategy', pride:'pride' };
+  document.getElementById('featVenues').innerHTML = card.venues.map(v => `<span class="venue-tag ${v}">${venueMap[v]||v}</span>`).join('');
+  feat.classList.add('show');
+  feat.scrollIntoView({ behavior:'smooth', block:'center' });
+}
+
+function dealRandom() {
+  const f = getFiltered();
+  if (!f.length) return;
+  showFeatured(f[Math.floor(Math.random()*f.length)]);
+}
+
+function dealWarmUp() {
+  const w = cards.filter(c => c.type === 'warm' || c.type === 'baseline');
+  showFeatured(w[Math.floor(Math.random()*w.length)]);
+}
+
+function dealApproach() {
+  const a = cards.filter(c => c.type === 'approach');
+  showFeatured(a[Math.floor(Math.random()*a.length)]);
+}
+
+function dealBombshell() {
+  const b = cards.filter(c => c.type === 'bombshell');
+  showFeatured(b[Math.floor(Math.random()*b.length)]);
+}
+
+function dealWildcard() {
+  const w = cards.filter(c => c.type === 'wildcard');
+  showFeatured(w[Math.floor(Math.random()*w.length)]);
+}
+
+renderCards();
+
+// -- FAILURE TRACKER --
+const FAIL_GOAL = 5;
+const WARMUP_GOAL = 10;
+let warmups = 0;
+const attempt_rewards = [
+  "A graceful no is still you showing up. That counts.",
+  "The clean exit is a skill. You just practiced it.",
+  "You took the shot. Most people don't.",
+  "One more attempt on the board.",
+  "Every no is a calibration. You learned something.",
+  "Michelle Obama walked out of that too. You're fine."
+];
+const win_rewards = [
+  "That's the whole point right there.",
+  "Something real just happened.",
+  "This is what you came for.",
+  "That one counts for two."
+];
+const milestones = {
+  3: "Three attempts. You're warm now. The next one is easier.",
+  5: "Five. You hit the goal. Whatever else happens tonight is a bonus.",
+  7: "Seven. You are in it.",
+  10: "Ten. This is a story you'll tell."
+};
+let fails = [];
+let wins = [];
+
+function addWarmup() {
+  warmups++;
+  const pct = Math.min((warmups / WARMUP_GOAL) * 100, 100);
+  document.getElementById('warmupBar').style.width = pct + '%';
+  const item = document.createElement('span');
+  item.className = 'fail-log-item';
+  item.textContent = '👁 ' + warmups;
+  document.getElementById('warmupLog').innerHTML = '';
+  document.getElementById('warmupLog').appendChild(item);
+  if (warmups >= WARMUP_GOAL) {
+    showReward("Ten. You're warmed up. The floor is yours.");
+  } else {
+    showReward((WARMUP_GOAL - warmups) + " more to warm-up goal.");
+  }
+}
+
+function addFail(type) {
+  fails.push(type);
+  const n = fails.length;
+  const pct = Math.min((n / FAIL_GOAL) * 100, 100);
+  document.getElementById('failBar').style.width = pct + '%';
+  const labels = { graceful_no: 'Gave a graceful no', exit: 'Exited at discomfort', shot: 'Took the shot', smile: 'Smiled at stranger' };
+  const item = document.createElement('span');
+  item.className = 'fail-log-item';
+  item.textContent = labels[type] || type;
+  document.getElementById('failLog').appendChild(item);
+  showReward(milestones[n] || attempt_rewards[Math.floor(Math.random() * attempt_rewards.length)]);
+}
+
+function addWin(type) {
+  wins.push(type);
+  const n = wins.length;
+  const pct = Math.min((n / 5) * 100, 100);
+  document.getElementById('winBar').style.width = pct + '%';
+  const labels = { info: 'Exchanged info', convo: 'Great convo', compliment: 'Gave a compliment', intro: 'Introduced myself', card: 'Coochie card out' };
+  const item = document.createElement('span');
+  item.className = 'win-log-item';
+  item.textContent = labels[type] || type;
+  document.getElementById('winLog').appendChild(item);
+  showReward(win_rewards[Math.floor(Math.random() * win_rewards.length)]);
+}
+
+function showReward(text) {
+  const el = document.getElementById('failReward');
+  document.getElementById('failRewardText').textContent = text;
+  el.style.display = '';
+  clearTimeout(el._timer);
+  el._timer = setTimeout(() => { el.style.display = 'none'; }, 4000);
+}
+
+function resetFails() {
+  fails = []; wins = []; warmups = 0;
+  document.getElementById('failBar').style.width = '0%';
+  document.getElementById('winBar').style.width = '0%';
+  document.getElementById('warmupBar').style.width = '0%';
+  document.getElementById('failLog').innerHTML = '';
+  document.getElementById('winLog').innerHTML = '';
+  document.getElementById('warmupLog').innerHTML = '';
+  document.getElementById('failReward').style.display = 'none';
+}
+
+
+function showIntent(mode, el) {
+  document.querySelectorAll('.intent-panel').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.intent-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('intent-' + mode).style.display = '';
+  el.classList.add('active');
+}
+
+</script>
+</body>
+</html>
